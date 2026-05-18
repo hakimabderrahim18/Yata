@@ -99,6 +99,23 @@ export const PRODUCTS = [
   },
 ]
 
+export const PROMO = {
+  title: 'Pack Grossiste',
+  highlight: 'Boissons Premium — Été 2026',
+  description:
+    'Profitez de notre offre exclusive sur les boissons gazeuses et jus naturels importés. Commande en palettes complètes avec livraison prioritaire dans toute la région.',
+  product: 'Assortiment Boissons Premium',
+  image: 'https://images.unsplash.com/photo-1596803244618-8dea4c6a4fca?w=800&q=80',
+  discount: '-15%',
+  urgency: 'Offre valable jusqu\'au 30 Juin 2026 — Stock limité',
+  perks: [
+    'Livraison gratuite à partir de 5 palettes',
+    'Prix dégressifs selon les quantités commandées',
+    'Disponible pour supermarchés, épiceries & hôtels',
+    'Service après-vente dédié inclus',
+  ],
+}
+
 export const WHY_US = [
   {
     icon: 'Zap',

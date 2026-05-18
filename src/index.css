@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, system-ui, sans-serif; margin: 0; padding: 0; }
+  * { box-sizing: border-box; }
+  #root { width: 100%; max-width: 100%; text-align: left; }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #15803d, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}

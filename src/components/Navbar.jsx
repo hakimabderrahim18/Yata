@@ -37,53 +37,41 @@ export default function Navbar() {
           className="flex items-center gap-2.5 group"
           aria-label="YATA Distribution"
         >
-          <svg viewBox="0 0 100 100" className="w-10 h-10 shrink-0 group-hover:scale-105 transition-transform duration-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 100 100" className="w-10 h-10 shrink-0 group-hover:scale-110 transition-transform duration-300 filter drop-shadow-[0_2px_8px_rgba(37,99,235,0.25)]" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="emeraldGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#10b981" />
-                <stop offset="100%" stopColor="#047857" />
+              <linearGradient id="blueGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#60a5fa" />
+                <stop offset="50%" stopColor="#2563eb" />
+                <stop offset="100%" stopColor="#1d4ed8" />
               </linearGradient>
-              <linearGradient id="goldGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#fbbf24" />
-                <stop offset="100%" stopColor="#d97706" />
+              <linearGradient id="greenGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a3e635" />
+                <stop offset="50%" stopColor="#22c55e" />
+                <stop offset="100%" stopColor="#16a34a" />
               </linearGradient>
-              <linearGradient id="silverGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="94%" stopColor="#94a3b8" />
+              <linearGradient id="yellowGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fde047" />
+                <stop offset="60%" stopColor="#eab308" />
+                <stop offset="100%" stopColor="#ca8a04" />
               </linearGradient>
-              <linearGradient id="ringGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#10b981" />
-                <stop offset="50%" stopColor="#fbbf24" />
-                <stop offset="100%" stopColor="#047857" />
+              <linearGradient id="orangeRedGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#f97316" />
+                <stop offset="50%" stopColor="#ea580c" />
+                <stop offset="100%" stopColor="#dc2626" />
               </linearGradient>
             </defs>
-            
-            {/* Outer elegant rings */}
-            <circle cx="50" cy="50" r="46" stroke="url(#ringGradNav)" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.7" />
-            <circle cx="50" cy="50" r="41" stroke="url(#ringGradNav)" strokeWidth="2.5" />
-            
-            {/* Leaf wrapping background */}
-            <path d="M 28 58 C 24 38, 38 22, 68 26 C 54 36, 46 48, 28 58 Z" fill="url(#emeraldGradNav)" />
-            <path d="M 38 42 C 34 28, 48 18, 72 22 C 60 30, 52 38, 38 42 Z" fill="url(#emeraldGradNav)" opacity="0.4" />
 
-            {/* Sleek Geometric Gold Truck inside the leaf */}
-            {/* Cargo bed */}
-            <path d="M 36 44 L 56 44 L 56 54 L 36 54 Z" fill="url(#goldGradNav)" rx="1" />
-            {/* Cargo leaf vein lines */}
-            <path d="M 38 49 Q 47 47 54 49" stroke="#047857" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-            <path d="M 43 49 L 45 46" stroke="#047857" strokeWidth="1" strokeLinecap="round" />
-            <path d="M 49 49 L 51 46" stroke="#047857" strokeWidth="1" strokeLinecap="round" />
+            {/* Blue head circle */}
+            <circle cx="50" cy="21" r="9.5" fill="url(#blueGradNav)" />
 
-            {/* Cabin */}
-            <path d="M 59 45 L 66 45 C 68 45, 69 46, 70 48 L 72 51 C 73 52, 73 53, 73 54 L 59 54 Z" fill="url(#goldGradNav)" />
-            {/* Windshield */}
-            <path d="M 66 46 L 70 51 L 60 51 L 60 46 Z" fill="#047857" opacity="0.8" />
-            
-            {/* Wheels */}
-            <circle cx="43" cy="57" r="3.5" fill="url(#silverGradNav)" stroke="#1e293b" strokeWidth="1.5" />
-            <circle cx="43" cy="57" r="1" fill="#1e293b" />
-            <circle cx="65" cy="57" r="3.5" fill="url(#silverGradNav)" stroke="#1e293b" strokeWidth="1.5" />
-            <circle cx="65" cy="57" r="1" fill="#1e293b" />
+            {/* Green arm (left) */}
+            <path d="M 46 32 C 34 23, 24 25, 24 35 C 24 43, 34 44, 44 38 C 47 36, 47 34, 46 32 Z" fill="url(#greenGradNav)" />
+
+            {/* Yellow arm (right & diagonal body) */}
+            <path d="M 48 32 C 58 23, 70 17, 77 18 C 62 27, 52 42, 50 52 C 48 62, 51 72, 55 78 C 51 68, 48 56, 48 32 Z" fill="url(#yellowGradNav)" />
+
+            {/* Orange-Red bottom loop */}
+            <path d="M 50 52 C 46 62, 38 70, 39 76 C 41 81, 48 81, 52 76 C 53 70, 51 60, 50 52 Z" fill="url(#orangeRedGradNav)" />
           </svg>
           <div className="leading-tight text-start">
             <span className="block text-white font-extrabold text-lg tracking-tight">YATA</span>

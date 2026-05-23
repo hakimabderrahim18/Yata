@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @layer base {
-  html { scroll-behavior: smooth; }
-  body { font-family: Inter, system-ui, sans-serif; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: Inter, system-ui, sans-serif; margin: 0; padding: 0; overflow-x: hidden; max-width: 100%; }
+  [dir="rtl"] body { font-family: Cairo, Inter, system-ui, sans-serif; }
   * { box-sizing: border-box; }
-  #root { width: 100%; max-width: 100%; text-align: left; }
+  #root { width: 100%; max-width: 100%; text-align: start; overflow-x: hidden; }
 }
 
 @layer utilities {

@@ -1,20 +1,21 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import SectionHeader from '../ui/SectionHeader'
-import { PARTNERS } from '../../data/content'
+import { useLanguage } from '../../context/LanguageContext'
 import { fadeUp } from '../ui/animations'
 
 export default function Partners() {
   const trackRef = useRef(null)
+  const { PARTNERS, t } = useLanguage()
 
   return (
     <section id="partners" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <SectionHeader
-            eyebrow="Nos Partenaires"
-            title="Ils nous font confiance"
-            subtitle="YATA Distribution travaille avec les marques alimentaires les plus reconnues d'Algérie pour vous garantir des produits de qualité au meilleur prix."
+            eyebrow={t('partnersEyebrow')}
+            title={t('partnersTitle')}
+            subtitle={t('partnersSubtitle')}
           />
         </motion.div>
 
@@ -58,14 +59,14 @@ export default function Partners() {
           className="mt-16 bg-gradient-to-r from-green-50 via-white to-amber-50 border border-gray-100 rounded-3xl p-8 text-center shadow-sm"
         >
           <p className="text-gray-500 text-base leading-relaxed max-w-2xl mx-auto">
-            Vous êtes fournisseur ou distributeur et souhaitez rejoindre notre réseau ?{' '}
+            {t('partnersTrustText')}{' '}
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-green-700 font-semibold hover:underline"
+              className="text-green-700 font-semibold hover:underline cursor-pointer"
             >
-              Contactez notre équipe commerciale
+              {t('partnersTrustCTA')}
             </button>{' '}
-            pour discuter d'un partenariat gagnant-gagnant.
+            {t('partnersTrustTextEnd')}
           </p>
         </motion.div>
       </div>

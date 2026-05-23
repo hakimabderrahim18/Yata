@@ -1,9 +1,11 @@
+import { useState, useRef } from 'react'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown } from 'lucide-react'
-import { STATS } from '../../data/content'
+import { useLanguage } from '../../context/LanguageContext'
 import { useCountUp } from '../../hooks/useCountUp'
+import Particles from '../ui/Particles'
+import Magnetic from '../ui/Magnetic'
 
 function StatCard({ value, suffix, label, start }) {
   const count = useCountUp(value, 2000, start)
@@ -21,6 +23,16 @@ function StatCard({ value, suffix, label, start }) {
 export default function Hero() {
   const statsRef = useRef(null)
   const statsInView = useInView(statsRef, { once: true })
+  const { STATS, t, isRtl, logoSub } = useLanguage()
+
+  // Cursor tracking coordinates
+  const [coords, setCoords] = useState({ x: 0, y: 0 })
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+  }
 
   const scrollDown = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
@@ -29,7 +41,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden group/hero"
     >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
@@ -40,7 +55,17 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-green-950/95 via-green-900/88 to-green-800/75" />
         <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 via-transparent to-transparent" />
+        <Particles count={35} color="rgba(245, 158, 11, 0.22)" />
       </div>
+
+      {/* Dynamic Cursor Spotlight Overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 z-10 transition-opacity duration-700"
+        style={{
+          opacity: isHovered ? 1 : 0,
+          background: `radial-gradient(600px circle at ${coords.x}px ${coords.y}px, rgba(21, 128, 61, 0.12) 0%, rgba(245, 158, 11, 0.05) 50%, transparent 100%)`,
+        }}
+      />
 
       {/* Decorative grid pattern */}
       <div
@@ -62,54 +87,66 @@ export default function Hero() {
             className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/30 text-amber-300 text-sm font-semibold px-4 py-2 rounded-full mb-6"
           >
             <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-            Distributeur alimentaire en gros — Algérie
+            {t('headlineBadge')}
           </motion.div>
 
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
-          >
-            <span className="block">YATA</span>
-            <span className="block text-gradient bg-gradient-to-r from-amber-400 to-green-400" style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              Distribution
-            </span>
-          </motion.h1>
+          {/* Title - Staggered Springs */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 text-start">
+            <motion.span
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: 'spring', stiffness: 90, damping: 13, delay: 0.3 }}
+              className="block"
+            >
+              YATA
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: 'spring', stiffness: 90, damping: 13, delay: 0.45 }}
+              className="block text-gradient bg-gradient-to-r from-amber-400 to-green-400"
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+            >
+              {logoSub}
+            </motion.span>
+          </h1>
 
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-xl lg:text-2xl text-green-100/90 leading-relaxed mb-10 max-w-2xl"
+            transition={{ type: 'spring', stiffness: 80, damping: 14, delay: 0.6 }}
+            className="text-xl lg:text-2xl text-green-100/90 leading-relaxed mb-10 max-w-2xl text-start"
           >
-            Votre partenaire de confiance dans la{' '}
-            <span className="text-amber-300 font-semibold">distribution alimentaire</span>{' '}
-            — du producteur à votre commerce, partout en Algérie.
+            {t('heroSubtitleStart')}
+            <span className="text-amber-300 font-semibold">{t('heroSubtitleHighlight')}</span>
+            {t('heroSubtitleEnd')}
           </motion.p>
 
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.65 }}
+            transition={{ delay: 0.75 }}
             className="flex flex-wrap gap-4"
           >
-            <button
-              onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-2xl transition-all shadow-lg shadow-amber-500/30 hover:shadow-amber-400/40 hover:scale-105 text-base"
-            >
-              Nos Services
-              <ArrowRight size={18} />
-            </button>
-            <button
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-8 py-4 rounded-2xl transition-all backdrop-blur-sm text-base"
-            >
-              Nous Contacter
-            </button>
+            <Magnetic range={80} actionScale={1.04}>
+              <button
+                onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
+                className="flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-2xl transition-all shadow-lg shadow-amber-500/30 hover:shadow-amber-400/40 text-base cursor-pointer"
+              >
+                {t('ourServices')}
+                <ArrowRight size={18} className={isRtl ? 'rotate-180' : ''} />
+              </button>
+            </Magnetic>
+            <Magnetic range={80} actionScale={1.04}>
+              <button
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-8 py-4 rounded-2xl transition-all backdrop-blur-sm text-base cursor-pointer"
+              >
+                {t('contactUs')}
+              </button>
+            </Magnetic>
           </motion.div>
         </div>
 
@@ -126,12 +163,12 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.button
         onClick={scrollDown}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/60 hover:text-white flex flex-col items-center gap-1 transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/60 hover:text-white flex flex-col items-center gap-1 transition-colors cursor-pointer"
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        aria-label="Défiler vers le bas"
+        aria-label={t('scroll')}
       >
-        <span className="text-xs font-medium tracking-widest uppercase">Défiler</span>
+        <span className="text-xs font-medium tracking-widest uppercase">{t('scroll')}</span>
         <ChevronDown size={20} />
       </motion.button>
     </section>

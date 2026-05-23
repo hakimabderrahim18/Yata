@@ -1,20 +1,21 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import SectionHeader from '../ui/SectionHeader'
-import { PRODUCTS } from '../../data/content'
+import { useLanguage } from '../../context/LanguageContext'
 import { fadeUp, staggerContainer } from '../ui/animations'
 
 export default function Products() {
   const [hovered, setHovered] = useState(null)
+  const { PRODUCTS, t } = useLanguage()
 
   return (
     <section id="products" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <SectionHeader
-            eyebrow="Nos Produits"
-            title="Catalogue de produits alimentaires"
-            subtitle="Une sélection rigoureuse des meilleures marques algériennes et internationales, disponibles en quantités grossistes livrées directement chez vous."
+            eyebrow={t('productsEyebrow')}
+            title={t('productsTitle')}
+            subtitle={t('productsSubtitle')}
           />
         </motion.div>
 
@@ -30,7 +31,7 @@ export default function Products() {
               key={i}
               variants={fadeUp}
               custom={i}
-              className="group relative rounded-3xl overflow-hidden shadow-md bg-white cursor-default"
+              className="group relative rounded-3xl overflow-hidden shadow-md bg-white cursor-default text-start"
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
             >
@@ -43,7 +44,7 @@ export default function Products() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 via-green-950/20 to-transparent" />
                 {/* Category chip */}
-                <div className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                <div className="absolute top-4 start-4 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">
                   {product.category}
                 </div>
               </div>
@@ -67,9 +68,9 @@ export default function Products() {
                     >
                       <button
                         onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2.5 rounded-xl text-sm transition-colors"
+                        className="w-full bg-green-700 hover:bg-green-600 text-white font-semibold py-2.5 rounded-xl text-sm transition-colors cursor-pointer"
                       >
-                        Commander ce produit
+                        {t('orderProduct')}
                       </button>
                     </motion.div>
                   )}

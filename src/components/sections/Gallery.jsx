@@ -2,20 +2,21 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ZoomIn } from 'lucide-react'
 import SectionHeader from '../ui/SectionHeader'
-import { GALLERY_IMAGES } from '../../data/content'
+import { useLanguage } from '../../context/LanguageContext'
 import { fadeUp, staggerContainer } from '../ui/animations'
 
 export default function Gallery() {
   const [lightbox, setLightbox] = useState(null)
+  const { GALLERY_IMAGES, t } = useLanguage()
 
   return (
     <section id="gallery" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <SectionHeader
-            eyebrow="Galerie"
-            title="Nos installations & activités"
-            subtitle="Découvrez nos entrepôts modernes, notre flotte de véhicules et nos opérations de distribution à travers l'Algérie."
+            eyebrow={t('galleryEyebrow')}
+            title={t('galleryTitle')}
+            subtitle={t('gallerySubtitle')}
           />
         </motion.div>
 
@@ -50,7 +51,7 @@ export default function Gallery() {
                 </div>
               </div>
               {/* Category badge */}
-              <div className="absolute top-3 left-3 bg-black/40 backdrop-blur-sm text-white text-xs font-medium px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-3 start-3 bg-black/40 backdrop-blur-sm text-white text-xs font-medium px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
                 {img.alt}
               </div>
             </motion.div>
@@ -83,12 +84,12 @@ export default function Gallery() {
               />
               <button
                 onClick={() => setLightbox(null)}
-                className="absolute top-3 right-3 w-10 h-10 bg-white/20 hover:bg-white/30 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-colors"
-                aria-label="Fermer"
+                className="absolute top-3 end-3 w-10 h-10 bg-white/20 hover:bg-white/30 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-colors cursor-pointer"
+                aria-label={t('close')}
               >
                 <X size={18} />
               </button>
-              <div className="absolute bottom-4 left-4 text-white text-sm font-semibold bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+              <div className="absolute bottom-4 start-4 text-white text-sm font-semibold bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-lg">
                 {GALLERY_IMAGES[lightbox].alt}
               </div>
             </motion.div>

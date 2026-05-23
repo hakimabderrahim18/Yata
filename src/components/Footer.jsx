@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Truck, Mail, Phone, MapPin, Send } from 'lucide-react'
-import { NAV_LINKS } from '../data/content'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { useLanguage } from '../context/LanguageContext'
 
 const SvgFacebook = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
@@ -16,19 +16,19 @@ const SvgInstagram = () => (
 )
 const SvgLinkedin = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
-    <circle cx="4" cy="4" r="2" />
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
   </svg>
 )
-const SvgX = () => (
+const SvgWhatsApp = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.729-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.428 2.016 13.99 1.01 11.999 1.01c-5.439 0-9.862 4.372-9.865 9.801-.001 1.836.5 3.626 1.448 5.194l-1.001 3.654 3.748-.983l-.683-.393zm11.367-7.904c-.318-.159-1.884-.93-2.175-1.036-.291-.106-.503-.159-.715.159-.211.318-.82.159-1.006 1.164-.185.212-.37.212-.688.053-.318-.159-1.341-.494-2.553-1.576-.943-.841-1.58-1.88-1.765-2.198-.185-.318-.02-.489.14-.647.143-.143.318-.371.477-.557.159-.186.212-.318.318-.53.106-.212.053-.397-.026-.557-.08-.159-.715-1.722-.979-2.357-.257-.619-.519-.536-.715-.546-.185-.01-.397-.01-.608-.01-.212 0-.556.08-.847.4-.291.318-1.111 1.087-1.111 2.65 0 1.563 1.137 3.072 1.296 3.284.159.212 2.238 3.418 5.423 4.793.757.327 1.348.522 1.81.668.761.242 1.453.208 2.002.126.612-.091 1.884-.77 2.148-1.511.265-.74.265-1.378.185-1.511-.08-.133-.291-.212-.609-.371z" />
   </svg>
 )
 
 export default function Footer() {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const { NAV_LINKS, t, isRtl } = useLanguage()
 
   const handleSubscribe = (e) => {
     e.preventDefault()
@@ -42,33 +42,80 @@ export default function Footer() {
   return (
     <footer className="bg-green-950 text-white">
       {/* Top section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-start">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 text-start">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center">
-                <Truck size={20} className="text-white" />
-              </div>
-              <div>
+              <svg viewBox="0 0 100 100" className="w-10 h-10 shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="emeraldGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#10b981" />
+                    <stop offset="100%" stopColor="#047857" />
+                  </linearGradient>
+                  <linearGradient id="goldGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#fbbf24" />
+                    <stop offset="100%" stopColor="#d97706" />
+                  </linearGradient>
+                  <linearGradient id="silverGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffffff" />
+                    <stop offset="94%" stopColor="#94a3b8" />
+                  </linearGradient>
+                  <linearGradient id="ringGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#10b981" />
+                    <stop offset="50%" stopColor="#fbbf24" />
+                    <stop offset="100%" stopColor="#047857" />
+                  </linearGradient>
+                </defs>
+                
+                {/* Outer elegant rings */}
+                <circle cx="50" cy="50" r="46" stroke="url(#ringGradFoot)" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.7" />
+                <circle cx="50" cy="50" r="41" stroke="url(#ringGradFoot)" strokeWidth="2.5" />
+                
+                {/* Leaf wrapping background */}
+                <path d="M 28 58 C 24 38, 38 22, 68 26 C 54 36, 46 48, 28 58 Z" fill="url(#emeraldGradFoot)" />
+                <path d="M 38 42 C 34 28, 48 18, 72 22 C 60 30, 52 38, 38 42 Z" fill="url(#emeraldGradFoot)" opacity="0.4" />
+
+                {/* Sleek Geometric Gold Truck inside the leaf */}
+                {/* Cargo bed */}
+                <path d="M 36 44 L 56 44 L 56 54 L 36 54 Z" fill="url(#goldGradFoot)" rx="1" />
+                {/* Cargo leaf vein lines */}
+                <path d="M 38 49 Q 47 47 54 49" stroke="#047857" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                <path d="M 43 49 L 45 46" stroke="#047857" strokeWidth="1" strokeLinecap="round" />
+                <path d="M 49 49 L 51 46" stroke="#047857" strokeWidth="1" strokeLinecap="round" />
+
+                {/* Cabin */}
+                <path d="M 59 45 L 66 45 C 68 45, 69 46, 70 48 L 72 51 C 73 52, 73 53, 73 54 L 59 54 Z" fill="url(#goldGradFoot)" />
+                {/* Windshield */}
+                <path d="M 66 46 L 70 51 L 60 51 L 60 46 Z" fill="#047857" opacity="0.8" />
+                
+                {/* Wheels */}
+                <circle cx="43" cy="57" r="3.5" fill="url(#silverGradFoot)" stroke="#1e293b" strokeWidth="1.5" />
+                <circle cx="43" cy="57" r="1" fill="#1e293b" />
+                <circle cx="65" cy="57" r="3.5" fill="url(#silverGradFoot)" stroke="#1e293b" strokeWidth="1.5" />
+                <circle cx="65" cy="57" r="1" fill="#1e293b" />
+              </svg>
+              <div className="text-start">
                 <span className="block text-white font-extrabold text-lg leading-none">YATA</span>
-                <span className="block text-amber-400 text-[10px] font-semibold tracking-widest uppercase">Distribution</span>
+                <span className="block text-amber-400 text-[10px] font-semibold tracking-widest uppercase">{t('logoSub')}</span>
               </div>
             </div>
             <p className="text-green-300 text-sm leading-relaxed mb-6">
-              Votre partenaire de confiance dans la distribution alimentaire en gros. Depuis Tiaret, nous approvisionnons les commerces de 24 wilayas algériennes.
+              {t('footerDesc')}
             </p>
             {/* Socials */}
             <div className="flex gap-3">
               {[
-                { icon: SvgFacebook, href: '#', label: 'Facebook' },
-                { icon: SvgInstagram, href: '#', label: 'Instagram' },
-                { icon: SvgLinkedin, href: '#', label: 'LinkedIn' },
-                { icon: SvgX, href: '#', label: 'X (Twitter)' },
+                { icon: SvgFacebook, href: 'https://www.facebook.com/share/1CQEZmJpHx/?mibextid=wwXIfr', label: 'Facebook' },
+                { icon: SvgInstagram, href: 'https://instagram.com/yatadistribution', label: 'Instagram' },
+                { icon: SvgLinkedin, href: 'https://www.linkedin.com/in/yata-distribution-99a82a3b6?utm_source=share_via&utm_content=profile&utm_medium=member_ios', label: 'LinkedIn' },
+                { icon: SvgWhatsApp, href: 'https://wa.me/213770590510', label: 'WhatsApp' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-9 h-9 bg-white/10 hover:bg-amber-500 rounded-lg flex items-center justify-center transition-colors"
                 >
@@ -79,14 +126,14 @@ export default function Footer() {
           </div>
 
           {/* Quick links */}
-          <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Navigation</h4>
+          <div className="text-start">
+            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">{t('navigationHeader')}</h4>
             <ul className="space-y-2.5">
               {NAV_LINKS.map(({ label, href }) => (
                 <li key={href}>
                   <button
                     onClick={() => scrollTo(href)}
-                    className="text-green-300 hover:text-amber-400 text-sm transition-colors text-left"
+                    className="text-green-300 hover:text-amber-400 text-sm transition-colors text-start cursor-pointer"
                   >
                     {label}
                   </button>
@@ -96,33 +143,33 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Contact</h4>
+          <div className="text-start">
+            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">{t('contactHeader')}</h4>
             <ul className="space-y-3.5">
               <li className="flex gap-3 items-start">
                 <MapPin size={16} className="text-amber-400 mt-0.5 shrink-0" />
-                <span className="text-green-300 text-sm">Zone Industrielle, Tiaret 14000, Algérie</span>
+                <span className="text-green-300 text-sm">{isRtl ? 'المنطقة الصناعية، تيارت 14000، الجزائر' : 'Zone Industrielle, Tiaret 14000, Algérie'}</span>
               </li>
               <li className="flex gap-3 items-center">
                 <Phone size={16} className="text-amber-400 shrink-0" />
-                <a href="tel:+21346000000" className="text-green-300 hover:text-white text-sm transition-colors">+213 46 000 0000</a>
+                <a href="tel:+213770590510" className="text-green-300 hover:text-white text-sm transition-colors">+213 (0) 770 59 05 10</a>
               </li>
               <li className="flex gap-3 items-center">
                 <Mail size={16} className="text-amber-400 shrink-0" />
-                <a href="mailto:contact@yata-distribution.dz" className="text-green-300 hover:text-white text-sm transition-colors break-all">
-                  contact@yata-distribution.dz
+                <a href="mailto:sarlyata14@gmail.com" className="text-green-300 hover:text-white text-sm transition-colors break-all">
+                  sarlyata14@gmail.com
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">Newsletter</h4>
-            <p className="text-green-300 text-sm mb-4">Recevez nos offres grossistes et actualités directement dans votre boîte mail.</p>
+          <div className="text-start">
+            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">{t('newsletterHeader')}</h4>
+            <p className="text-green-300 text-sm mb-4">{t('newsletterDesc')}</p>
             {subscribed ? (
-              <div className="bg-green-800/50 border border-green-600 rounded-xl px-4 py-3 text-green-300 text-sm">
-                ✓ Vous êtes abonné(e) !
+              <div className="bg-green-800/50 border border-green-600 rounded-xl px-4 py-3 text-green-300 text-sm text-start">
+                {t('newsletterSuccess')}
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="flex gap-2">
@@ -132,14 +179,14 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="votre@email.com"
                   required
-                  className="flex-1 bg-white/10 border border-white/20 text-white placeholder-green-400/60 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-amber-400 transition-colors"
+                  className="flex-1 bg-white/10 border border-white/20 text-white placeholder-green-400/60 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-amber-400 transition-colors text-start"
                 />
                 <button
                   type="submit"
-                  className="w-10 h-10 bg-amber-500 hover:bg-amber-400 rounded-xl flex items-center justify-center transition-colors shrink-0"
-                  aria-label="S'abonner"
+                  className="w-10 h-10 bg-amber-500 hover:bg-amber-400 rounded-xl flex items-center justify-center transition-colors shrink-0 cursor-pointer"
+                  aria-label={t('newsletterHeader')}
                 >
-                  <Send size={16} />
+                  <Send size={16} className={isRtl ? 'rotate-180' : ''} />
                 </button>
               </form>
             )}
@@ -150,10 +197,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-green-400">
-          <span>© {new Date().getFullYear()} YATA Distribution. Tous droits réservés.</span>
+          <span>{t('copyrightText')}</span>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
+            <a href="#" className="hover:text-white transition-colors">{t('legal')}</a>
+            <a href="#" className="hover:text-white transition-colors">{t('privacy')}</a>
           </div>
         </div>
       </div>

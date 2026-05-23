@@ -26,14 +26,7 @@ const SvgWhatsApp = () => (
 )
 
 export default function Footer() {
-  const [email, setEmail] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
   const { NAV_LINKS, t, isRtl } = useLanguage()
-
-  const handleSubscribe = (e) => {
-    e.preventDefault()
-    if (email) setSubscribed(true)
-  }
 
   const scrollTo = (href) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
@@ -43,7 +36,7 @@ export default function Footer() {
     <footer className="bg-green-950 text-white">
       {/* Top section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-start">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1 text-start">
             <div className="flex items-center gap-2.5 mb-5">
@@ -151,34 +144,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div className="text-start">
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider">{t('newsletterHeader')}</h4>
-            <p className="text-green-300 text-sm mb-4">{t('newsletterDesc')}</p>
-            {subscribed ? (
-              <div className="bg-green-800/50 border border-green-600 rounded-xl px-4 py-3 text-green-300 text-sm text-start">
-                {t('newsletterSuccess')}
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex gap-2">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="votre@email.com"
-                  required
-                  className="flex-1 bg-white/10 border border-white/20 text-white placeholder-green-400/60 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-amber-400 transition-colors text-start"
-                />
-                <button
-                  type="submit"
-                  className="w-10 h-10 bg-amber-500 hover:bg-amber-400 rounded-xl flex items-center justify-center transition-colors shrink-0 cursor-pointer"
-                  aria-label={t('newsletterHeader')}
-                >
-                  <Send size={16} className={isRtl ? 'rotate-180' : ''} />
-                </button>
-              </form>
-            )}
-          </div>
+
         </div>
       </div>
 

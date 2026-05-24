@@ -37,7 +37,7 @@ export default function Navbar() {
           className="flex items-center gap-2.5 group"
           aria-label="YATA Distribution"
         >
-          <svg viewBox="0 0 100 100" className="w-10 h-10 shrink-0 group-hover:scale-110 transition-transform duration-300 filter drop-shadow-[0_2px_10px_rgba(37,99,235,0.3)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 100 100" className="w-10 h-10 shrink-0 group-hover:scale-110 transition-transform duration-300 filter drop-shadow-[0_2px_10px_rgba(37,99,235,0.35)]" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="blueGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#1e3a8a" />

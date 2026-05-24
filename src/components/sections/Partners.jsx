@@ -30,7 +30,7 @@ function PartnerLogo({ name }) {
     src = '/logos/henkel.svg'
     padding = 'p-3'
   } else if (n.includes('jumbo')) {
-    src = '/logos/jumbo.svg'
+    src = '/logos/jumbo.png'
     padding = 'p-2'
   } else if (n.includes('azzouz')) {
     src = '/logos/azzouz.jpg'

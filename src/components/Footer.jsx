@@ -104,6 +104,22 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+            {/* QR Code Scan Footer */}
+            <div className="mt-6 pt-5 border-t border-white/10 flex items-center gap-4 group">
+              <div className="w-14 h-14 rounded-xl overflow-hidden border border-white/20 bg-white/5 p-1 shrink-0">
+                <img
+                  src="/YATAQR.jpg"
+                  alt="QR Code YATA"
+                  className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div>
+                <span className="block text-white font-bold text-xs uppercase tracking-wider mb-0.5">YATA Link</span>
+                <span className="block text-green-300 text-[10px] leading-relaxed">
+                  {isRtl ? 'امسح الرمز للتواصل السريع' : 'Scannez pour un accès rapide'}
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Quick links */}

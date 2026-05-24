@@ -37,41 +37,41 @@ export default function Navbar() {
           className="flex items-center gap-2.5 group"
           aria-label="YATA Distribution"
         >
-          <svg viewBox="0 0 100 100" className="w-10 h-10 shrink-0 group-hover:scale-110 transition-transform duration-300 filter drop-shadow-[0_2px_8px_rgba(37,99,235,0.25)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 100 100" className="w-10 h-10 shrink-0 group-hover:scale-110 transition-transform duration-300 filter drop-shadow-[0_2px_10px_rgba(37,99,235,0.3)]" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="blueGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#60a5fa" />
+                <stop offset="0%" stopColor="#1e3a8a" />
                 <stop offset="50%" stopColor="#2563eb" />
-                <stop offset="100%" stopColor="#1d4ed8" />
+                <stop offset="100%" stopColor="#60a5fa" />
               </linearGradient>
               <linearGradient id="greenGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#a3e635" />
+                <stop offset="0%" stopColor="#14532d" />
                 <stop offset="50%" stopColor="#22c55e" />
-                <stop offset="100%" stopColor="#16a34a" />
+                <stop offset="100%" stopColor="#4ade80" />
               </linearGradient>
               <linearGradient id="yellowGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#fde047" />
-                <stop offset="60%" stopColor="#eab308" />
-                <stop offset="100%" stopColor="#ca8a04" />
+                <stop offset="0%" stopColor="#854d0e" />
+                <stop offset="50%" stopColor="#eab308" />
+                <stop offset="100%" stopColor="#fde047" />
               </linearGradient>
               <linearGradient id="orangeRedGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#f97316" />
-                <stop offset="50%" stopColor="#ea580c" />
-                <stop offset="100%" stopColor="#dc2626" />
+                <stop offset="0%" stopColor="#7f1d1d" />
+                <stop offset="50%" stopColor="#ef4444" />
+                <stop offset="100%" stopColor="#f97316" />
               </linearGradient>
             </defs>
 
             {/* Blue head circle */}
-            <circle cx="50" cy="21" r="9.5" fill="url(#blueGradNav)" />
+            <circle cx="50" cy="22" r="10" fill="url(#blueGradNav)" />
 
             {/* Green arm (left) */}
-            <path d="M 46 32 C 34 23, 24 25, 24 35 C 24 43, 34 44, 44 38 C 47 36, 47 34, 46 32 Z" fill="url(#greenGradNav)" />
+            <path d="M 47 38 C 36 29, 23 30, 23 40 C 23 48, 33 49, 44 44 C 47 42, 48 40, 47 38 Z" fill="url(#greenGradNav)" />
 
             {/* Yellow arm (right & diagonal body) */}
-            <path d="M 48 32 C 58 23, 70 17, 77 18 C 62 27, 52 42, 50 52 C 48 62, 51 72, 55 78 C 51 68, 48 56, 48 32 Z" fill="url(#yellowGradNav)" />
+            <path d="M 48 35 C 58 25, 70 17, 77 18 C 63 28, 54 44, 52 54 C 50 64, 53 74, 57 80 C 53 70, 50 58, 48 35 Z" fill="url(#yellowGradNav)" />
 
             {/* Orange-Red bottom loop */}
-            <path d="M 50 52 C 46 62, 38 70, 39 76 C 41 81, 48 81, 52 76 C 53 70, 51 60, 50 52 Z" fill="url(#orangeRedGradNav)" />
+            <path d="M 50 54 C 46 64, 38 72, 39 78 C 41 83, 48 83, 52 78 C 53 72, 51 62, 50 54 Z" fill="url(#orangeRedGradNav)" />
           </svg>
           <div className="leading-tight text-start">
             <span className="block text-white font-extrabold text-lg tracking-tight">YATA</span>

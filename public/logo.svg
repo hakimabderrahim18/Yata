@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#1e3a8a" />
+      <stop offset="50%" stopColor="#2563eb" />
+      <stop offset="100%" stopColor="#60a5fa" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#14532d" />
+      <stop offset="50%" stopColor="#22c55e" />
+      <stop offset="100%" stopColor="#4ade80" />
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#854d0e" />
+      <stop offset="50%" stopColor="#eab308" />
+      <stop offset="100%" stopColor="#fde047" />
+    </linearGradient>
+    <linearGradient id="orangeRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#7f1d1d" />
+      <stop offset="50%" stopColor="#ef4444" />
+      <stop offset="100%" stopColor="#f97316" />
+    </linearGradient>
+  </defs>
+
   <!-- Blue head circle -->
-  <circle cx="50" cy="21" r="9.5" fill="#2563eb" />
+  <circle cx="50" cy="22" r="10" fill="url(#blueGrad)" />
 
   <!-- Green arm (left) -->
-  <path d="M 46 32 C 34 23, 24 25, 24 35 C 24 43, 34 44, 44 38 C 47 36, 47 34, 46 32 Z" fill="#22c55e" />
+  <path d="M 47 38 C 36 29, 23 30, 23 40 C 23 48, 33 49, 44 44 C 47 42, 48 40, 47 38 Z" fill="url(#greenGrad)" />
 
   <!-- Yellow arm (right & diagonal body) -->
-  <path d="M 48 32 C 58 23, 70 17, 77 18 C 62 27, 52 42, 50 52 C 48 62, 51 72, 55 78 C 51 68, 48 56, 48 32 Z" fill="#eab308" />
+  <path d="M 48 35 C 58 25, 70 17, 77 18 C 63 28, 54 44, 52 54 C 50 64, 53 74, 57 80 C 53 70, 50 58, 48 35 Z" fill="url(#yellowGrad)" />
 
   <!-- Orange-Red bottom loop -->
-  <path d="M 50 52 C 46 62, 38 70, 39 76 C 41 81, 48 81, 52 76 C 53 70, 51 60, 50 52 Z" fill="#f97316" />
+  <path d="M 50 54 C 46 64, 38 72, 39 78 C 41 83, 48 83, 52 78 C 53 72, 51 62, 50 54 Z" fill="url(#orangeRedGrad)" />
 </svg>

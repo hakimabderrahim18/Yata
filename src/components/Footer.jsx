@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
 
 const SvgFacebook = () => (
@@ -26,6 +27,7 @@ const SvgWhatsApp = () => (
 )
 
 export default function Footer() {
+  const [showQrModal, setShowQrModal] = useState(false)
   const { NAV_LINKS, t, isRtl } = useLanguage()
 
   const scrollTo = (href) => {
@@ -110,7 +112,11 @@ export default function Footer() {
                 {isRtl ? 'رمز الاستجابة السريعة (QR)' : 'QR Code Officiel'}
               </span>
               <div className="flex items-start gap-4">
-                <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-white/20 bg-white p-1.5 shrink-0 shadow-lg group-hover:border-amber-400 transition-colors duration-300">
+                <div 
+                  onClick={() => setShowQrModal(true)}
+                  className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-white/20 bg-white p-1.5 shrink-0 shadow-lg group-hover:border-amber-400 transition-colors duration-300 cursor-zoom-in"
+                  title={isRtl ? 'اضغط لتكبير الرمز' : 'Cliquez pour agrandir'}
+                >
                   <img
                     src="/YATAQR.jpg"
                     alt="QR Code YATA"
@@ -181,6 +187,58 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Immersive Lightbox Modal for QR Code */}
+      <AnimatePresence>
+        {showQrModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowQrModal(false)}
+            className="fixed inset-0 z-[200] bg-black/85 backdrop-blur-md flex items-center justify-center p-4 cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white rounded-3xl p-6 sm:p-8 max-w-sm w-full relative flex flex-col items-center shadow-2xl border border-gray-100 cursor-default"
+            >
+              <button
+                onClick={() => setShowQrModal(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 p-2 rounded-full transition-colors cursor-pointer"
+                aria-label="Fermer"
+              >
+                <X size={18} />
+              </button>
+
+              <div className="w-64 h-64 rounded-2xl overflow-hidden border border-gray-100 bg-white p-2 shadow-inner mb-6 mt-2">
+                <img
+                  src="/YATAQR.jpg"
+                  alt="QR Code YATA Agrandit"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+
+              <div className="text-center">
+                <h3 className="font-extrabold text-gray-900 text-lg tracking-tight">
+                  {isRtl ? 'رمز الاستجابة السريعة YATA' : 'YATA Scan-to-Connect'}
+                </h3>
+                <p className="text-amber-500 font-bold text-xs mt-1 uppercase tracking-widest">
+                  {isRtl ? 'تواصل فوري' : 'Accès Direct'}
+                </p>
+                <p className="text-gray-500 text-xs mt-3 leading-relaxed">
+                  {isRtl
+                    ? 'امسح هذا الرمز باستخدام كاميرا هاتفك للوصول الفوري إلى واتساب، موقعنا، وروابطنا الرسمية.'
+                    : 'Scannez ce code avec la caméra de votre téléphone pour accéder instantanément à notre WhatsApp et nos liens officiels.'}
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </footer>
   )
 }

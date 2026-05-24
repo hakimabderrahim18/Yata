@@ -89,7 +89,7 @@ export default function Coverage() {
 
               {/* Badges */}
               <div className="absolute top-4 end-4 bg-white rounded-xl shadow-md px-4 py-2 text-center">
-                <div className="text-2xl font-extrabold text-green-700">3</div>
+                <div className="text-2xl font-extrabold text-green-700">{WILAYAS.length}</div>
                 <div className="text-xs text-gray-500 font-medium">{isRtl ? 'ولاية' : 'Wilayas'}</div>
               </div>
               <div className="absolute bottom-4 start-4 bg-white rounded-xl shadow-md px-4 py-2 flex items-center gap-2">

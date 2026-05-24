@@ -6,17 +6,17 @@ const DICTIONARY = {
   fr: {
     // SEO
     metaTitle: "YATA Distribution - Partenaire de confiance en distribution alimentaire",
-    metaDesc: "YATA Distribution - Votre partenaire de confiance dans la distribution alimentaire en Algérie. Distribution en gros, livraison régionale, produits alimentaires de qualité.",
+    metaDesc: "YATA Distribution - Votre partenaire de confiance dans la distribution alimentaire en Algérie. Distribution en gros et en détail, livraison régionale, produits alimentaires de qualité.",
 
     // General / UI
     requestQuote: "Devenir un client",
     contactUs: "Nous Contacter",
     ourServices: "Nos Services",
     scroll: "Défiler",
-    headlineBadge: "Distributeur alimentaire en gros — Algérie",
+    headlineBadge: "Distributeur alimentaire en gros et en détail — Algérie",
     heroSubtitleStart: "Votre partenaire de confiance dans la ",
     heroSubtitleHighlight: "distribution alimentaire",
-    heroSubtitleEnd: " — du producteur à votre commerce, partout en Algérie.",
+    heroSubtitleEnd: " — du producteur à votre commerce ou domicile, partout en Algérie.",
     exclusiveOffer: "Offre Exclusive",
     featuredProduct: "Produit vedette",
     getOffer: "Profiter de l'offre →",
@@ -27,7 +27,7 @@ const DICTIONARY = {
     privacy: "Politique de confidentialité",
     allRightsReserved: "Tous droits réservés.",
     close: "Fermer",
-    footerDesc: "Votre partenaire de confiance dans la distribution alimentaire en gros. Depuis Tiaret, nous approvisionnons les commerces de 3 wilayas algériennes.",
+    footerDesc: "Votre partenaire de confiance dans la distribution alimentaire en gros et en détail. Depuis Tiaret, nous approvisionnons les commerces et particuliers de 5 wilayas algériennes.",
     navigationHeader: "Navigation",
     contactHeader: "Contact",
     newsletterHeader: "Newsletter",
@@ -41,12 +41,12 @@ const DICTIONARY = {
     // About Section
     aboutUs: "À propos de nous",
     whoIsYata: "Qui est YATA Distribution ?",
-    aboutSubtitle: "Depuis 2014, YATA Distribution est le partenaire de référence des commerçants, épiciers et grandes surfaces de l'ouest algérien pour l'approvisionnement alimentaire en gros.",
+    aboutSubtitle: "Depuis 2014, YATA Distribution est le partenaire de référence des commerçants, épiciers, grandes surfaces et particuliers de l'ouest algérien pour l'approvisionnement alimentaire en gros et en détail.",
     yearsExp: "Années d'expérience dans la distribution",
     ourMission: "Notre Mission",
     missionDesc: "Fournir aux commerces algériens un accès rapide, fiable et économique aux produits alimentaires de qualité, en s'appuyant sur une logistique de pointe et des partenariats durables avec les meilleurs producteurs nationaux.",
     ourVision: "Notre Vision",
-    visionDesc: "Devenir le distributeur alimentaire en gros numéro 1 en Algérie d'ici 2030, en couvrant l'ensemble du territoire national avec des services logistiques modernes et efficaces.",
+    visionDesc: "Devenir le distributeur alimentaire en gros et en détail numéro 1 en Algérie d'ici 2030, en couvrant l'ensemble du territoire national avec des services logistiques modernes et efficaces.",
     ourValues: "Nos Valeurs",
     ourJourney: "Notre Parcours",
 
@@ -64,7 +64,7 @@ const DICTIONARY = {
     whyUsSubtitle: "YATA Distribution s'engage à offrir une expérience d'approvisionnement exceptionnelle grâce à des standards élevés de qualité et de service.",
     whyUsStats: [
       { value: '98%', label: 'Taux de satisfaction client' },
-      { value: '24h', label: 'Délai de livraison moyen' },
+      { value: 'Rapide', label: 'Livraison à domicile & commerce' },
       { value: '5 000 m²', label: "Capacité d'entrepôt" },
       { value: '30+', label: 'Véhicules de livraison' },
     ],
@@ -72,13 +72,13 @@ const DICTIONARY = {
     // Coverage Section
     coverageEyebrow: "Couverture régionale",
     coverageTitle: "Nous livrons partout en Algérie",
-    coverageSubtitle: "Depuis notre siège à Tiaret, notre réseau de livraison s'étend sur 3 wilayas, assurant un service rapide et fiable.",
+    coverageSubtitle: "Depuis notre siège à Tiaret, notre réseau de livraison s'étend sur 5 wilayas, assurant un service rapide et fiable.",
     wilayasCovered: "Wilayas couvertes",
     directDelivery: "Livraison directe dans toutes ces zones",
     vehiclesCount: "30+ véhicules",
     coverageCards: [
-      { label: 'Livraison J+1', desc: 'Sur les wilayas prioritaires' },
-      { label: 'Couverture 24/7', desc: 'Commandes disponibles en ligne' },
+      { label: 'Livraison Rapide', desc: 'Sur toutes les zones couvertes' },
+      { label: 'Livraison directe', desc: 'Livraison à domicile et commerce' },
     ],
 
     // Gallery Section
@@ -127,7 +127,7 @@ const DICTIONARY = {
     messagePlaceholder: "Décrivez votre besoin...",
     sendMessageBtn: "Envoyer le message",
     successSent: "Message envoyé !",
-    successSentDesc: "Merci pour votre message. Notre équipe vous contactera dans les 24 heures.",
+    successSentDesc: "Merci pour votre message. Notre équipe vous contactera dans les plus brees délais.",
     sendAnother: "Envoyer un autre message",
 
     // Lists and Data
@@ -142,7 +142,7 @@ const DICTIONARY = {
     STATS: [
       { value: 500, suffix: '+', label: 'Clients Actifs' },
       { value: 1200, suffix: '+', label: 'Produits Distribués' },
-      { value: 3, suffix: ' Wilayas', label: 'Couverture Régionale' },
+      { value: 5, suffix: ' Wilayas', label: 'Couverture Régionale' },
       { value: 10, suffix: ' Ans', label: "D'expérience" },
     ],
     SERVICES: [
@@ -165,12 +165,6 @@ const DICTIONARY = {
         color: 'blue',
       },
       {
-        icon: 'Milk',
-        title: 'Produits Laitiers',
-        description: 'Distribution de produits laitiers frais — lait, yaourts, fromages — dans le respect de la chaîne du froid.',
-        color: 'yellow',
-      },
-      {
         icon: 'Wheat',
         title: 'Produits Alimentaires Secs',
         description: 'Farine, semoule, huile, sucre et autres denrées alimentaires sèches livrées en quantités grossistes.',
@@ -178,8 +172,8 @@ const DICTIONARY = {
       },
       {
         icon: 'ShoppingCart',
-        title: 'Distribution en Gros',
-        description: 'Vente en gros à des prix compétitifs pour les supermarchés, épiceries et grandes surfaces.',
+        title: 'Distribution Gros & Détail',
+        description: 'Vente en gros et en détail à des prix compétitifs pour les supermarchés, épiceries, grandes surfaces et particuliers.',
         color: 'purple',
       },
       {
@@ -191,7 +185,7 @@ const DICTIONARY = {
       {
         icon: 'MapPin',
         title: 'Réseau de Livraison Régional',
-        description: 'Couverture de 3 wilayas avec un réseau de livraison dense et fiable centré sur Tiaret.',
+        description: 'Couverture de 5 wilayas avec un réseau de livraison dense et fiable centré sur Tiaret.',
         color: 'red',
       },
     ],
@@ -200,11 +194,6 @@ const DICTIONARY = {
         category: 'Boissons',
         image: 'https://images.unsplash.com/photo-1596803244618-8dea4c6a4fca?w=400&q=80',
         description: 'Boissons gazeuses, jus naturels, eaux minérales et boissons énergisantes.',
-      },
-      {
-        category: 'Produits Laitiers',
-        image: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&q=80',
-        description: 'Lait frais, yaourts, fromages et crèmes de qualité supérieure.',
       },
       {
         category: 'Farines & Semoules',
@@ -257,7 +246,7 @@ const DICTIONARY = {
       {
         icon: 'Shield',
         title: 'Réseau Fiable',
-        description: "Plus de 10 ans d'expérience et une présence établie dans 3 wilayas algériennes.",
+        description: "Plus de 10 ans d'expérience et une présence établie dans 5 wilayas algériennes.",
       },
       {
         icon: 'TrendingDown',
@@ -304,9 +293,9 @@ const DICTIONARY = {
     ],
     TIMELINE: [
       { year: '2014', title: 'Fondation', desc: 'Création de YATA Distribution à Tiaret avec une vision locale.' },
-      { year: '2017', title: 'Expansion Régionale', desc: 'Extension à 3 wilayas du centre-ouest algérien.' },
+      { year: '2017', title: 'Expansion Régionale', desc: 'Extension à 5 wilayas clés du territoire national.' },
       { year: '2020', title: 'Modernisation', desc: "Acquisition d'une flotte réfrigérée et d'un entrepôt moderne de 5 000 m²." },
-      { year: '2024', title: 'Leadership', desc: 'Couverture de 3 wilayas, 500+ clients, leader régional.' },
+      { year: '2024', title: 'Leadership', desc: 'Couverture de 5 wilayas, 500+ clients, leader régional.' },
     ],
     CONTACT_INFO: [
       {
@@ -319,7 +308,7 @@ const DICTIONARY = {
       {
         label: 'Email',
         value: 'sarlyata14@gmail.com',
-        sub: 'Réponse en 24h',
+        sub: 'Réponse rapide',
         color: 'bg-amber-100 text-amber-700',
         href: 'mailto:sarlyata14@gmail.com',
       },
@@ -339,33 +328,37 @@ const DICTIONARY = {
       },
     ],
     WILAYAS: [
-      'Tiaret', 'Tissemsilt', 'Djelfa',
+      'Alger', 'Oran', 'El Bayadh', 'Tiaret', 'Tissemsilt',
     ],
     PARTNERS: [
-      { name: 'Cevital', logo: 'https://ui-avatars.com/api/?name=Cevital&background=15803d&color=fff&size=120&bold=true' },
-      { name: 'Hamoud Boualem', logo: 'https://ui-avatars.com/api/?name=HB&background=1d4ed8&color=fff&size=120&bold=true' },
-      { name: 'Soummam', logo: 'https://ui-avatars.com/api/?name=Soummam&background=dc2626&color=fff&size=120&bold=true' },
-      { name: 'Ifri', logo: 'https://ui-avatars.com/api/?name=Ifri&background=0891b2&color=fff&size=120&bold=true' },
-      { name: 'Ramy', logo: 'https://ui-avatars.com/api/?name=Ramy&background=7c3aed&color=fff&size=120&bold=true' },
-      { name: 'Bimo', logo: 'https://ui-avatars.com/api/?name=Bimo&background=b45309&color=fff&size=120&bold=true' },
-      { name: 'Général Emballage', logo: 'https://ui-avatars.com/api/?name=GE&background=064e3b&color=fff&size=120&bold=true' },
-      { name: 'Laiterie Tiaret', logo: 'https://ui-avatars.com/api/?name=LT&background=be185d&color=fff&size=120&bold=true' },
+      { name: 'Famico', logo: '' },
+      { name: 'Jumbo', logo: '' },
+      { name: 'Amour', logo: '' },
+      { name: 'Sosemie', logo: '' },
+      { name: 'Safina', logo: '' },
+      { name: 'Henkel', logo: '' },
+      { name: 'Cevital', logo: '' },
+      { name: 'Ifri', logo: '' },
+      { name: 'Zaim', logo: '' },
+      { name: 'SOS Azzouz', logo: '' },
+      { name: 'Saka', logo: '' },
+      { name: 'SARL Telwas', logo: '' },
     ]
   },
   ar: {
     // SEO
     metaTitle: "YATA Distribution - شريككم الموثوق في توزيع المواد الغذائية",
-    metaDesc: "YATA Distribution - شريككم الموثوق في توزيع المواد الغذائية بالجملة في الجزائر. توصيل إقليمي، خدمات لوجستية، ومنتجات غذائية عالية الجودة.",
+    metaDesc: "YATA Distribution - شريككم الموثوق في توزيع المواد الغذائية بالجملة والتجزئة في الجزائر. توصيل إقليمي، خدمات لوجستية، ومنتجات غذائية عالية الجودة.",
 
     // General / UI
     requestQuote: "كن زبوناً",
     contactUs: "اتصل بنا",
     ourServices: "خدماتنا",
     scroll: "تمرير لأسفل",
-    headlineBadge: "موزع مواد غذائية بالجملة — الجزائر",
+    headlineBadge: "موزع مواد غذائية بالجملة والتجزئة — الجزائر",
     heroSubtitleStart: "شريككم الموثوق في ",
     heroSubtitleHighlight: "توزيع المواد الغذائية",
-    heroSubtitleEnd: " — من المنتج إلى متجركم، في جميع أنحاء الجزائر.",
+    heroSubtitleEnd: " — من المنتج إلى متجركم أو منزلكم، في جميع أنحاء الجزائر.",
     exclusiveOffer: "عرض حصري",
     featuredProduct: "منتج مميز",
     getOffer: "استفد من العرض الآن ←",
@@ -376,7 +369,7 @@ const DICTIONARY = {
     privacy: "سياسة الخصوصية",
     allRightsReserved: "كل الحقوق محفوظة.",
     close: "إغلاق",
-    footerDesc: "شريككم الموثوق في توزيع المواد الغذائية بالجملة. من تيارت، نقوم بتموين المحلات التجارية في 3 ولايات جزائرية.",
+    footerDesc: "شريككم الموثوق في توزيع المواد الغذائية بالجملة والتجزئة. من تيارت، نقوم بتموين المحلات التجارية والأفراد في 5 ولايات جزائرية.",
     navigationHeader: "التنقل",
     contactHeader: "الاتصال",
     newsletterHeader: "النشرة الإخبارية",
@@ -390,12 +383,12 @@ const DICTIONARY = {
     // About Section
     aboutUs: "من نحن",
     whoIsYata: "ما هي ياتا للتوزيع؟",
-    aboutSubtitle: "منذ عام 2014، تعد ياتا للتوزيع الشريك المرجعي للتجار والبقالين والمساحات التجارية الكبرى في الغرب الجزائري للإمداد بالمواد الغذائية بالجملة.",
+    aboutSubtitle: "منذ عام 2014، تعد ياتا للتوزيع الشريك المرجعي للتجار والبقالين والمساحات التجارية الكبرى والأفراد في الغرب الجزائري للإمداد بالمواد الغذائية بالجملة والتجزئة.",
     yearsExp: "سنوات خبرة في مجال التوزيع",
     ourMission: "مهمتنا",
-    missionDesc: "تزويد المحلات التجارية الجزائرية بوصول سريع وموثوق واقتصادي إلى مواد غذائية عالية الجودة، بالاعتماد على خدمات لوجستية متطورة وشراكات دائمة مع أفضل المنتجين الوطنيين.",
+    missionDesc: "تزويد المحلات التجارية الجزائرية بوصول سريع وموثوق واقتصادي إلى مواد غذائية عالية الجودة، بالاعتماد على خدمات لوجستية متطورة وشراكات تضامنية مع أفضل المنتجين الوطنيين.",
     ourVision: "رؤيتنا",
-    visionDesc: "أن نصبح الموزع الأول للمواد الغذائية بالجملة في الجزائر بحلول عام 2030، من خلال تغطية كامل التراب الوطني بخدمات لوجستية حديثة وفعالة.",
+    visionDesc: "أن نصبح الموزع الأول للمواد الغذائية بالجملة والتجزئة في الجزائر بحلول عام 2030، من خلال تغطية كامل التراب الوطني بخدمات لوجستية حديثة وفعالة.",
     ourValues: "قيمنا",
     ourJourney: "مسيرتنا",
 
@@ -413,7 +406,7 @@ const DICTIONARY = {
     whyUsSubtitle: "تلتزم ياتا للتوزيع بتقديم تجربة توريد استثنائية بفضل معايير الجودة والخدمة العالية.",
     whyUsStats: [
       { value: '98%', label: 'معدل رضا العملاء' },
-      { value: '24 ساعة', label: 'متوسط وقت التوصيل' },
+      { value: 'سريعة', label: 'توصيل للمنازل والمحلات' },
       { value: '5,000 م²', label: "مساحة المستودعات" },
       { value: '30+', label: 'مركبة توزيع' },
     ],
@@ -421,13 +414,13 @@ const DICTIONARY = {
     // Coverage Section
     coverageEyebrow: "التغطية الجغرافية",
     coverageTitle: "نصِلكم أينما كنتم في الجزائر",
-    coverageSubtitle: "من مقرنا في تيارت، يمتد شبكة توزيعنا على 3 ولايات، مما يضمن خدمة سريعة وموثوقة.",
+    coverageSubtitle: "من مقرنا في تيارت، يمتد شبكة توزيعنا على 5 ولايات، مما يضمن خدمة سريعة وموثوقة.",
     wilayasCovered: "الولايات المغطاة",
     directDelivery: "توصيل مباشر إلى كل هذه المناطق",
     vehiclesCount: "أكثر من 30 مركبة",
     coverageCards: [
-      { label: 'التوصيل في اليوم التالي', desc: 'في الولايات ذات الأولوية' },
-      { label: 'تغطية 24/7', desc: 'الطلبات متاحة عبر الإنترنت' },
+      { label: 'توصيل سريع للغاية', desc: 'خدمة توصيل سريعة وموثوقة' },
+      { label: 'توصيل مباشر', desc: 'توصيل للمنازل والمحلات التجارية' },
     ],
 
     // Gallery Section
@@ -476,7 +469,7 @@ const DICTIONARY = {
     messagePlaceholder: "صف لنا احتياجاتك...",
     sendMessageBtn: "إرسال الرسالة",
     successSent: "تم إرسال الرسالة بنجاح!",
-    successSentDesc: "شكراً لكم على رسالتكم. سيتصل بكم فريقنا في غضون 24 ساعة.",
+    successSentDesc: "شكراً لكم على رسالتكم. سيتصل بكم فريقنا في أقرب وقت ممكن.",
     sendAnother: "إرسال رسالة أخرى",
 
     // Lists and Data
@@ -491,7 +484,7 @@ const DICTIONARY = {
     STATS: [
       { value: 500, suffix: '+', label: 'عملاء نشطون' },
       { value: 1200, suffix: '+', label: 'منتجات موزعة' },
-      { value: 3, suffix: ' ولاية', label: 'تغطية إقليمية' },
+      { value: 5, suffix: ' ولايات', label: 'تغطية إقليمية' },
       { value: 10, suffix: ' سنوات', label: 'خبرة' },
     ],
     SERVICES: [
@@ -514,12 +507,6 @@ const DICTIONARY = {
         color: 'blue',
       },
       {
-        icon: 'Milk',
-        title: 'مشتقات الحليب',
-        description: 'توزيع منتجات الألبان الطازجة — حليب، ياغورت، أجبان — مع احترام تام لسلسلة التبريد.',
-        color: 'yellow',
-      },
-      {
         icon: 'Wheat',
         title: 'المواد الغذائية الجافة',
         description: 'الدقيق والسميد والزيت والسكر والمواد الغذائية الجافة الأخرى المسلمة بكميات الجملة.',
@@ -527,8 +514,8 @@ const DICTIONARY = {
       },
       {
         icon: 'ShoppingCart',
-        title: 'توزيع الجملة',
-        description: 'البيع بالجملة بأسعار تنافسية للسوبرماركت ومحلات البقالة والمساحات التجارية الكبرى.',
+        title: 'توزيع الجملة والتجزئة',
+        description: 'البيع بالجملة والتجزئة بأسعار تنافسية للسوبرماركت، محلات البقالة، المساحات التجارية الكبرى والأفراد.',
         color: 'purple',
       },
       {
@@ -540,7 +527,7 @@ const DICTIONARY = {
       {
         icon: 'MapPin',
         title: 'شبكة التوصيل الإقليمية',
-        description: 'تغطية 3 ولايات بشبكة توصيل مكثفة وموثوقة مركزها ولاية تيارت.',
+        description: 'تغطية 5 ولايات بشبكة توصيل مكثفة وموثوقة مركزها ولاية تيارت.',
         color: 'red',
       },
     ],
@@ -549,11 +536,6 @@ const DICTIONARY = {
         category: 'المشروبات',
         image: 'https://images.unsplash.com/photo-1596803244618-8dea4c6a4fca?w=400&q=80',
         description: 'مشروبات غازية، عصائر طبيعية، مياه معدنية ومشروبات طاقة.',
-      },
-      {
-        category: 'منتجات الألبان',
-        image: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&q=80',
-        description: 'حليب طازج، ياغورت، أجبان وقشدة ذات جودة عالية.',
       },
       {
         category: 'الدقيق والسميد',
@@ -606,7 +588,7 @@ const DICTIONARY = {
       {
         icon: 'Shield',
         title: 'شبكة موثوقة',
-        description: 'أكثر من 10 سنوات من الخبرة وحضور راسخ في 3 ولايات جزائرية.',
+        description: 'أكثر من 10 سنوات من الخبرة وحضور راسخ في 5 ولايات جزائرية.',
       },
       {
         icon: 'TrendingDown',
@@ -616,7 +598,7 @@ const DICTIONARY = {
       {
         icon: 'Handshake',
         title: 'شركاء مهنيون',
-        description: 'علاقات مستدامة مع كبرى العلامات التجارية الوطنية والدولية في قطاع الأغذية.',
+        description: 'شركاء عمل متميزون مع كبرى العلامات التجارية الوطنية والدولية في قطاع الأغذية.',
       },
       {
         icon: 'HeadphonesIcon',
@@ -653,9 +635,9 @@ const DICTIONARY = {
     ],
     TIMELINE: [
       { year: '2014', title: 'التأسيس', desc: 'تأسيس شركة ياتا للتوزيع في تيارت برؤية محلية.' },
-      { year: '2017', title: 'التوسع الإقليمي', desc: 'التوسع إلى 3 ولايات في الوسط الغربي الجزائري.' },
+      { year: '2017', title: 'التوسع الإقليمي', desc: 'التوسع إلى 5 ولايات رئيسية في الوطن.' },
       { year: '2020', title: 'التحديث', desc: "الاستحواذ على أسطول نقل مبرد ومستودع حديث بمساحة 5000 متر مربع." },
-      { year: '2024', title: 'الريادة', desc: 'تغطية 3 ولايات، أكثر من 500 عميل، وريادة إقليمية.' },
+      { year: '2024', title: 'الريادة', desc: 'تغطية 5 ولايات، أكثر من 500 عميل، وريادة إقليمية.' },
     ],
     CONTACT_INFO: [
       {
@@ -668,7 +650,7 @@ const DICTIONARY = {
       {
         label: 'البريد الإلكتروني',
         value: 'sarlyata14@gmail.com',
-        sub: 'الرد خلال 24 ساعة',
+        sub: 'رد سريع وموثوق',
         color: 'bg-amber-100 text-amber-700',
         href: 'mailto:sarlyata14@gmail.com',
       },
@@ -688,17 +670,21 @@ const DICTIONARY = {
       },
     ],
     WILAYAS: [
-      'تيارت', 'تسمسيلت', 'الجلفة',
+      'الجزائر', 'وهران', 'البيض', 'تيارت', 'تسمسيلت',
     ],
     PARTNERS: [
-      { name: 'Cevital', logo: 'https://ui-avatars.com/api/?name=Cevital&background=15803d&color=fff&size=120&bold=true' },
-      { name: 'Hamoud Boualem', logo: 'https://ui-avatars.com/api/?name=HB&background=1d4ed8&color=fff&size=120&bold=true' },
-      { name: 'Soummam', logo: 'https://ui-avatars.com/api/?name=Soummam&background=dc2626&color=fff&size=120&bold=true' },
-      { name: 'Ifri', logo: 'https://ui-avatars.com/api/?name=Ifri&background=0891b2&color=fff&size=120&bold=true' },
-      { name: 'Ramy', logo: 'https://ui-avatars.com/api/?name=Ramy&background=7c3aed&color=fff&size=120&bold=true' },
-      { name: 'Bimo', logo: 'https://ui-avatars.com/api/?name=Bimo&background=b45309&color=fff&size=120&bold=true' },
-      { name: 'Général Emballage', logo: 'https://ui-avatars.com/api/?name=GE&background=064e3b&color=fff&size=120&bold=true' },
-      { name: 'Laiterie Tiaret', logo: 'https://ui-avatars.com/api/?name=LT&background=be185d&color=fff&size=120&bold=true' },
+      { name: 'Famico', logo: '' },
+      { name: 'Jumbo', logo: '' },
+      { name: 'Amour', logo: '' },
+      { name: 'Sosemie', logo: '' },
+      { name: 'Safina', logo: '' },
+      { name: 'Henkel', logo: '' },
+      { name: 'Cevital', logo: '' },
+      { name: 'Ifri', logo: '' },
+      { name: 'Zaim', logo: '' },
+      { name: 'SOS Azzouz', logo: '' },
+      { name: 'Saka', logo: '' },
+      { name: 'SARL Telwas', logo: '' },
     ]
   }
 }

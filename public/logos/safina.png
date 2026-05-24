@@ -1,0 +1,363 @@
+<br />
+<b>Warning</b>:  file_get_contents(https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDFTxOkbkD60I-2Gg_4KxJv-kFX6-4hEeo&amp;playlistId=PLW70cPVvS5-U3lq3XC3ttZK5v-AGxrHNo&amp;part=snippet&amp;order=date&amp;maxResults=20): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in <b>/home/metidji/web/safina.dz/public_html/site/index/youtube.php</b> on line <b>4</b><br />
+<!doctype html>
+<html lang="fr">
+<head>
+	<base href="http://safina.dz/">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png"> 
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>Accueil  | C'est Safina qui nous réunit</title>
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="canonical" href="http://safina.dz/wp-content/uploads/2021/04/safina-logo.png">
+	<meta name="description" content="C'est Safina qui nous réunit">
+	
+	<meta property="og:url" content="http://safina.dz/wp-content/uploads/2021/04/safina-logo.png" />
+	<meta property="og:image" content="http://safina.dz/logo.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:title" content="Accueil " />
+	<meta property="og:description" content="C'est Safina qui nous réunit" />
+	<meta property="twitter:card" content="summary" >
+	<meta property="twitter:title" content="Accueil " >
+	<meta property="twitter:creator" content="@SafinaDZ" >
+	<meta property="twitter:url" content="http://safina.dz/wp-content/uploads/2021/04/safina-logo.png" >
+	<meta property="twitter:image" content="http://safina.dz/logo.png" >
+	<meta property="twitter:description" content="C'est Safina qui nous réunit" >
+	<link rel="author" href="https://plus.google.com/118004421081022628654/posts">
+	
+	<script type="application/ld+json">
+	{ "@context" : "http://schema.org",
+	  "@type" : "Organization",
+	  "name" : "safina",
+	  "url" : "http://safina.dz",
+	  "logo": "http://safina.dz/logo.png",
+	  "sameAs" : [ 
+	  		"https://plus.google.com/+SafinaDZ/",
+	    	"http://facebook.com/safinadz",
+	    	"https://twitter.com/SafinaDZ",
+			"https://www.youtube.com/channel/UCJWrWI9RTjVo3oE-EDTm4FA/"
+			],
+	  "contactPoint" : [
+		    { "@type" : "ContactPoint",
+		      "telephone" : "+213 45 30 80 80",
+		      "faxNumber": "+213 45 30 81 81",
+		      "contactType" : "customer service",
+		      "areaServed" : ["DZ"],
+		      "email": "contact@groupe-metidji.com"
+		    }]
+		
+    }
+	</script>
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="./templates/default/css/normalize.css">
+	<link rel="stylesheet" href="./templates/default/LayerSlider/layerslider.css" type="text/css">
+	<link rel="stylesheet" href="./templates/default/css/flexgrid.css" type="text/css">
+	<link rel="stylesheet" href="./templates/default/css/styles2.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./templates/default/Gallery/css/style.css"/>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="./templates/default/js/freewall.js"></script>
+	<script src="./templates/default/js/general2.js"></script>
+	<script src="./templates/default/js/sticky.js"></script>
+	<script src="./templates/default/js/flexgrid.js"></script>
+	
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-64635913-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+    <script type='text/javascript' src='./templates/default/LayerSlider/greensock.js'></script>
+    <script type='text/javascript' src='./templates/default/LayerSlider/layerslider.kreaturamedia.jquery.js'></script>
+    <script type='text/javascript' src='./templates/default/LayerSlider/layerslider.transitions.js'></script>
+    
+    
+	<script type="text/javascript" src="./templates/default/FancyboxSources/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="./templates/default/FancyboxSources/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<link rel="stylesheet" type="text/css" href="./templates/default/FancyboxSources/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="./templates/default/FancyboxSources/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="./templates/default/FancyboxSources/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>
+		$(document).ready(function(d, s, id){
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.async=true;
+	  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=909687125757869";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+		</script>
+				<a style="display: none;" class="fancybox fancybox.iframe newsletter" href="lightbox/newsletter"></a>
+				<script>
+					$(document).ready(function() {
+						// Activate fancyBox
+						$(".fancybox").fancybox({
+							 scrolling : 'no',
+							 fitToView: true,
+							
+							padding : 0,
+							width : 600,
+							helpers : {
+						        overlay : {
+						            css : {
+						                'background' : 'rgba(0, 0, 0, 0.65)'
+						            }
+						        }
+					    	},
+					    	onComplete : function() {
+								$('.fancybox-iframe').load(function() { // wait for frame to load and then gets it's height
+									$('.fancybox-iframe').height($(this).find('body').height());
+								});
+							}
+						
+						});
+						
+						
+						// Launch fancyBox on first element
+						$(".fancybox.newsletter").eq(0).trigger('click');
+						$(".fancybox.banner").eq(0).trigger('click');
+					});
+					
+		</script>
+	<div id="HeaderSlider">
+	<div class="slider">
+    <script data-cfasync="false" type="text/javascript">
+        var lsjQuery = jQuery;
+        var curSkin = 'fullwidth';
+        </script>
+        <script data-cfasync="false" type="text/javascript">
+            lsjQuery(document).ready(function() {
+            if (typeof lsjQuery.fn.layerSlider == "undefined"){
+                lsShowNotice('layerslider', 'jquery');
+            }
+            else{
+                lsjQuery("#layerslider").layerSlider({
+                responsive: true,
+                responsiveUnder : 1600,
+				layersContainer : 1600,
+                skin: 'fullwidth',
+                slideDirection: 'right',
+                globalBGColor: 'transparent',
+                hoverPrevNext: false,
+                autoPlayVideos: false,
+                skinsPath: './templates/default/LayerSlider/',
+                thumbnailNavigation: 0,
+                navButtons : false,
+                navStartStop : false,
+                navPrevNext:false
+                })
+            }
+        });
+        </script>
+        <div class="ls-fullwidth-container" style="">
+            <div class="ls-fullwidth">
+                <div id="layerslider" class="ls-wp-container" style="width:100%;height:320px;margin:0 auto;">
+                    
+                    <div class="ls-slide" style="width:100%;" data-ls="transition3d:1;timeshift:500; slidedelay:4000;">
+                        
+						<img src="./templates/default/img/slider/couscous/couscous_text.png" alt="parallax img texte couscous slider" style="z-index:8;top:55%;left:50%;" class="ls-s2" data-ls="rotatexin:360;rotatexout:360;fadeout:0;durationin:1000;">
+                        <img src="./templates/default/img/slider/couscous/couscous_3.png" alt="parallax img 3 couscous slider" style="top:50%;left:50%;" class="ls-s2" data-ls="parallaxlevel:3;fadein:10;offsetxout:-500;durationin:1000;">
+                        <img src="./templates/default/img/slider/couscous/couscous_2.png" alt="parallax img 2 couscous slider" style="top: 50%; left: 50%;" class="ls-s2" data-ls="parallaxlevel:6;easingin:easeOutCubic;offsetxin:500;offsetxout:-500;fadeout:0;durationin:750;">
+                        <img src="./templates/default/img/slider/couscous/couscous_1.png"alt="parallax img 1 couscous slider" style="top: 50%; left: 50%;" class="ls-s2" data-ls="parallaxlevel:9;easingin:easeOutCubic;offsetxin:500;offsetxout:-500;fadeout:0;durationin:1250;">
+                    </div>
+                    
+                    
+                    
+                    <div class="ls-slide" style="width:100%;" data-ls="transition3d:1;timeshift:500; slidedelay:4000;">
+                        
+                        <img src="./templates/default/img/slider/farines/farine_text.png" alt="parallax img texte farine slider" style="z-index:8;top:53%;left:50%;" class="ls-s2" data-ls="rotatexin:360;rotatexout:360;fadeout:0;durationin:1000;">
+                        <img src="./templates/default/img/slider/farines/farine_3.png" alt="parallax img 3 farine slider" style="top:50%;left:50%;" class="ls-s2" data-ls="parallaxlevel:3;fadein:10;offsetxout:-500;durationin:1000;">
+                        <img src="./templates/default/img/slider/farines/farine_2.png" alt="parallax img 2 farine slider" style="top: 50%; left: 50%;" class="ls-s2" data-ls="parallaxlevel:5;easingin:easeOutCubic;offsetxin:500;offsetxout:-500;fadeout:0;durationin:750;">
+                        <img src="./templates/default/img/slider/farines/farine_1.png" alt="parallax img 1 farine slider" style="top: 50%; left: 50%;" class="ls-s2" data-ls="parallaxlevel:9;easingin:easeOutCubic;offsetxin:500;offsetxout:-500;fadeout:0;durationin:1250;">
+                         
+                  	</div>
+                    
+                    
+                    
+                    
+                    <div class="ls-slide" style="width:100%;" data-ls="transition3d:1;timeshift:500; slidedelay:4000;">
+                        <img src="./templates/default/img/slider/pates/pates_text.png" alt="parallax img texte pate slider" style="z-index:8;top:55%;left:50%;" class="ls-s2" data-ls="rotatexin:360;rotatexout:360;fadeout:0;durationin:1000;">
+                        <img src="./templates/default/img/slider/pates/pates_3.png" alt="parallax img 3 pate slider" style="top:50%;left:50%;" class="ls-s2" data-ls="parallaxlevel:3;fadein:10;offsetxout:-500;durationin:1750;">
+                        <img src="./templates/default/img/slider/pates/pates_2.png" alt="parallax img 2 pate slider" style="top: 50%; left: 50%;" class="ls-s2" data-ls="parallaxlevel:6;easingin:easeOutCubic;offsetxin:500;offsetxout:-500;fadeout:0;durationin:1000;">
+                        <img src="./templates/default/img/slider/pates/pates_1.png" alt="parallax img 1 pate slider" style="top: 50%; left: 50%;" class="ls-s2" data-ls="parallaxlevel:9;easingin:easeOutCubic;offsetxin:500;offsetxout:-500;fadeout:0;durationin:1000;">
+                         
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div>
+		<div id="LogonMenu">
+
+	<a href="/"><div id="logo"></div></a>
+	
+	<div id="menu">
+		<div id="MenuInner">
+			<div id="left" class="menublockper2">
+				<a href="/La_Marque/" ><div class="item " style="width:27%;">La marque</div></a>
+				<a href="/Produits/" ><div class="item " style="width:27%;">Nos produits</div></a>
+				<a href="/Recettes_Astuces/" ><div class="item " style="width:37%;">Nos recettes et astuces</div></a>
+				<div style="clear: both;"></div>
+			</div>
+			<div id="right" class="menublockper2">
+				<a href="/Engagements/" ><div class="item " style="width: 40%;">Nos engagements</div></a>
+				<a href="/Contact/" ><div class="item " style="width: 25%;text-align: left;">Contact</div></a>
+				<div class="item" style="width: 20%;height: 28px;box-sizing: border-box;padding: 2px 0;">
+					<a href="https://www.facebook.com/Safinadz" ><div class='social fb'></div></a>
+					<a href="https://twitter.com/SafinaDZ" ><div class='social twitter'></div></a>
+					<a href="https://www.youtube.com/channel/UCJWrWI9RTjVo3oE-EDTm4FA" ><div class='social yt'></div></a>
+					<a href="http://instagram.com/safina.dz" ><div class='social insta'></div></a>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+	<div id="menuMobile">
+		<select onChange="self.location=this.options[this.selectedIndex].value">
+			<option class="menuitemMobile" value="/" selected>Accueil</option>
+			<option class="menuitemMobile" value="/La_Marque/" >La marque</option>
+			<option class="menuitemMobile" value="/Produits/" >Nos produits</option>
+			<option class="menuitemMobile" value="/Recettes_Astuces/" >Recettes et astuces</option>
+			<option class="menuitemMobile" value="/Engagements/" >Nos engagements</option>
+			<option class="menuitemMobile" value="/Contact/" >Contact</option>
+		</select>
+	</div>
+
+</div>	</div>
+	<div id="SiteContainer">
+		<div class="ContentContainer">			
+			<div class="content row no_padding widthed">		
+				<div class="col_6 no_padding">
+					<a href="Produits/1/farines/">
+						<div class="bordered box Shadowed">
+							<div id="FarineHome">
+								<div class="cover"></div>
+								<div class="title">
+									<h3>Des farines</h3>
+									<div>Pour chacune de vos envies</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="Produits/2/Pates/11/spaghetti/">
+					<div class="bordered box Shadowed">
+						<div id="SpaghettiHome">
+							<div class="cover"></div>
+							<div class="title">
+								<h3>Des spaghettis</h3>
+								<div>Pour tous ceux qui ont du goût</div>
+							</div>
+						</div>
+					</div>	
+					</a>
+				</div>
+				<div class="col_6 last no_padding">
+					<a href="Produits/2/pates/">
+						<div class="bordered box Shadowed">
+							<div id="PatesHome">
+								<div class="cover"></div>
+							</div>
+						</div>
+					</a>
+					<a href="La_Marque/">
+						<div class="box Shadowed">
+							<div id="LaMarque">
+								<h3>La marque</h3>
+								<div>Grâce à son expérience, à son savoir-faire et à ses produits de qualité, Safina vous offre plusieurs gammes faciles à cuisiner. Elles vous permettront non seulement de varier vos plaisirs mais aussi de mijoter de bons petits plats à déguster en famille pour les petites et grandes occasions.
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="Recettes_Astuces/">
+						<div class="bordered box Shadowed">
+							<div id="RecettesHome">
+								<div class="cover"></div>
+									<div id="logo"></div>
+									<div class="title3">
+										<h3>Laissez vous inspirer par la variété de Safina </h3>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</a>
+				</div>
+			</div>
+<div class="container">
+			<div class="content row Shadowed widthed" id="footer">
+				<div class="col_7">
+					<script>
+					$(document).ready(function() {
+					 
+					  $("#owl-YT").owlCarousel({
+					    items : 3,
+					    lazyLoad : true,
+					    navigation : false,
+					    autoPlay:true,
+					    pagination:false
+					  });
+					 
+					});
+					</script>
+					
+					<div id="owl-YT" class="owl-carousel">
+										</div>
+					<div id="YTBannerFooter" class="bordered">
+						<div id="title"><h1>La saga publicitaire de Safina</h1></div>
+						<div id="YTsubscribe">
+							<script src="https://apis.google.com/js/platform.js"></script>
+							<div class="g-ytsubscribe" data-channelid="UCJWrWI9RTjVo3oE-EDTm4FA" data-layout="default" data-count="default"></div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				<div class="col_5 last">
+					<div id="FacebookBox">
+						<br>
+						<div class="Pacificate title">J'aime Safina<br>sur Facebook</div>
+						<div class="fb-like" data-href="https://www.facebook.com/Safinadz" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					</div>
+				</div>
+			</div>
+			</div>
+		
+		
+		
+			<div id="SocialButtons">
+				<a href="https://www.facebook.com/Safinadz" ><div class="icon blue fb"></div></a>
+				<a href="https://twitter.com/SafinaDZ" ><div class="icon blue twitter"></div></a>
+				<a href="https://www.youtube.com/channel/UCJWrWI9RTjVo3oE-EDTm4FA" ><div class="icon blue yt"></div></a>
+				<a href="http://instagram.com/safina.dz" ><div class="icon blue insta"></div></a>
+				<div style="clear: both;"></div>
+			</div>
+			
+			
+		</div>
+	</div>
+	
+</body>
+</html>

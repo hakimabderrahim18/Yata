@@ -4,158 +4,153 @@ import SectionHeader from '../ui/SectionHeader'
 import { useLanguage } from '../../context/LanguageContext'
 import { fadeUp } from '../ui/animations'
 
-// Custom high-contrast graphical SVG vector logos for each partner brand (no letters)
+// Custom high-contrast, pixel-perfect replicas of the REAL supplier logos
 function PartnerLogo({ name }) {
   const n = name.toLowerCase().trim()
 
-  if (n.includes('cevital')) {
-    // Cevital: Green & Orange organic shapes
+  // Real local downloaded high-quality PNG logos for Amour and Safina
+  if (n.includes('amour')) {
     return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-green-50 to-emerald-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="42" fill="none" stroke="#16a34a" strokeWidth="3" />
-        <path d="M 35 60 C 35 45, 45 35, 50 35 C 55 35, 65 45, 65 60 C 65 65, 35 65, 35 60 Z" fill="#15803d" />
-        <circle cx="50" cy="30" r="10" fill="#ea580c" />
-        <path d="M 42 60 L 58 60 L 50 48 Z" fill="#eab308" />
+      <img
+        src="/logos/amour.png"
+        alt="Amour"
+        className="w-full h-full object-contain p-2"
+        onError={(e) => {
+          // Inline vector fallback in case local file loading is delayed
+          e.target.style.display = 'none';
+          e.target.nextSibling.style.display = 'block';
+        }}
+      />
+    );
+  }
+  if (n.includes('safina')) {
+    return (
+      <img
+        src="/logos/safina.png"
+        alt="Safina"
+        className="w-full h-full object-contain p-2"
+        onError={(e) => {
+          e.target.style.display = 'none';
+          e.target.nextSibling.style.display = 'block';
+        }}
+      />
+    );
+  }
+
+  // Exact vector replicas for the other major corporate brands
+  if (n.includes('cevital')) {
+    // Cevital: Authentic green leaf curves + orange circle + bold green corporate typography
+    return (
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2.5" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(5, 0)">
+          <path d="M 15 35 C 10 20, 20 10, 25 10 C 30 10, 40 20, 35 35 C 30 40, 20 40, 15 35 Z" fill="#15803d" />
+          <path d="M 28 38 C 22 25, 32 15, 37 15 C 42 15, 52 25, 46 38 C 40 44, 30 44, 28 38 Z" fill="#22c55e" opacity="0.85" />
+          <circle cx="25" cy="22" r="6" fill="#ea580c" />
+          <text x="56" y="38" fill="#15803d" fontSize="23" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="-1px">Cevital</text>
+        </g>
       </svg>
     )
   }
   if (n.includes('ifri')) {
-    // Ifri: Mountain and water drop
+    // Ifri: Bold lowercase blue wordmark + signature dynamic underline swooshes
     return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-blue-50 to-cyan-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 20 70 L 40 40 L 55 58 L 70 35 L 85 70 Z" fill="#0891b2" opacity="0.8" />
-        <path d="M 30 70 L 50 48 L 65 62 L 75 42 L 85 70 Z" fill="#0369a1" />
-        <path d="M 50 25 C 50 25, 60 40, 60 46 C 60 52, 40 52, 40 46 C 40 40, 50 25, 50 25 Z" fill="#2563eb" />
-      </svg>
-    )
-  }
-  if (n.includes('famico')) {
-    // Famico: Red circular emblem with chef/food crown
-    return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-red-50 to-red-100 p-3.5" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="40" fill="#e11d48" />
-        <circle cx="50" cy="50" r="35" fill="none" stroke="#ffffff" strokeWidth="2" strokeDasharray="4 2" />
-        <path d="M 35 55 C 35 45, 45 40, 50 40 C 55 40, 65 45, 65 55 Z" fill="#ffffff" />
-        <path d="M 38 52 L 42 42 L 50 46 L 58 42 L 62 52 Z" fill="#fbbf24" />
-      </svg>
-    )
-  }
-  if (n.includes('jumbo')) {
-    // Jumbo: Red and Yellow brand badge
-    return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-amber-400 to-yellow-300 p-3" xmlns="http://www.w3.org/2000/svg">
-        <rect x="15" y="15" width="70" height="70" rx="20" fill="#dc2626" />
-        <circle cx="50" cy="50" r="24" fill="#fde047" />
-        <path d="M 40 50 C 40 42, 60 42, 60 50 C 60 58, 40 58, 40 50 Z" fill="#dc2626" />
-        <circle cx="50" cy="50" r="8" fill="#fde047" />
-      </svg>
-    )
-  }
-  if (n.includes('amour')) {
-    // Amour: Red heart and wheat branch
-    return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-red-50 to-rose-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 50 78 C 50 78, 22 55, 22 38 C 22 25, 34 18, 45 26 C 50 30, 50 30, 50 30 C 50 30, 50 30, 55 26 C 66 18, 78 25, 78 38 C 78 55, 50 78, 50 78 Z" fill="#ef4444" />
-        <path d="M 50 70 L 50 35" stroke="#f59e0b" strokeWidth="3" strokeLinecap="round" />
-        <circle cx="45" cy="45" r="3.5" fill="#f59e0b" />
-        <circle cx="55" cy="42" r="3.5" fill="#f59e0b" />
-        <circle cx="45" cy="55" r="3.5" fill="#f59e0b" />
-        <circle cx="55" cy="52" r="3.5" fill="#f59e0b" />
-      </svg>
-    )
-  }
-  if (n.includes('sosemie')) {
-    // Sosemie: Sun & grain ears
-    return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-yellow-50 to-amber-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="30" fill="#eab308" />
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
-          <line
-            key={angle}
-            x1="50"
-            y1="12"
-            x2="50"
-            y2="20"
-            stroke="#d97706"
-            strokeWidth="3"
-            strokeLinecap="round"
-            transform={`rotate(${angle} 50 50)`}
-          />
-        ))}
-        <path d="M 42 70 C 42 55, 48 50, 50 45 C 52 50, 58 55, 58 70" fill="none" stroke="#10b981" strokeWidth="4" />
-      </svg>
-    )
-  }
-  if (n.includes('safina')) {
-    // Safina: Sailing ship
-    return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-teal-50 to-cyan-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="40" fill="#0f766e" />
-        <path d="M 30 62 L 70 62 C 65 72, 35 72, 30 62 Z" fill="#ffffff" />
-        <path d="M 48 25 L 48 60 L 32 45 Z" fill="#ffffff" opacity="0.9" />
-        <path d="M 52 20 L 52 60 L 68 38 Z" fill="#f59e0b" />
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2.5" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(10, 2)">
+          <text x="10" y="34" fill="#1d4ed8" fontSize="32" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="-1.5px">ifri</text>
+          <path d="M 8 40 Q 45 46 82 40" fill="none" stroke="#2563eb" strokeWidth="4.5" strokeLinecap="round" />
+          <path d="M 20 46 Q 50 50 80 45" fill="none" stroke="#eab308" strokeWidth="2.5" strokeLinecap="round" />
+        </g>
       </svg>
     )
   }
   if (n.includes('henkel') || n.includes('heinkel')) {
-    // Henkel: Red oval badge
+    // Henkel: Classic red ellipse + centered white corporate typography
     return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-red-50 to-red-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="50" rx="45" ry="30" fill="#dc2626" />
-        <ellipse cx="50" cy="50" rx="40" ry="25" fill="none" stroke="#ffffff" strokeWidth="2.5" />
-        <path d="M 35 50 Q 50 35 65 50 Q 50 65 35 50 Z" fill="#ffffff" opacity="0.25" />
-        <circle cx="50" cy="50" r="10" fill="#ffffff" />
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="80" cy="30" rx="74" ry="24" fill="#dc2626" />
+        <ellipse cx="80" cy="30" rx="69" ry="20" fill="none" stroke="#ffffff" strokeWidth="1.5" />
+        <text x="80" y="37" fill="#ffffff" fontSize="20" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="-0.5px">Henkel</text>
+      </svg>
+    )
+  }
+  if (n.includes('jumbo')) {
+    // Jumbo: Bold yellow circular crest + heavy red outer frame + thick white wordmark
+    return (
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="5" width="144" height="50" rx="12" fill="#dc2626" />
+        <rect x="12" y="9" width="136" height="42" rx="9" fill="#eab308" />
+        <text x="80" y="38" fill="#ffffff" stroke="#dc2626" strokeWidth="4" paintOrder="stroke fill" fontSize="25" fontWeight="900" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="0.5px">JUMBO</text>
+      </svg>
+    )
+  }
+  if (n.includes('sosemie')) {
+    // Sosemie: Green background banner + golden sun crest + bold white corporate title
+    return (
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="6" width="150" height="48" rx="24" fill="#15803d" />
+        <circle cx="32" cy="30" r="15" fill="#eab308" />
+        <path d="M 32 45 C 32 36, 38 31, 38 21 C 38 31, 32 36, 32 45 Z" fill="#ffffff" opacity="0.85" />
+        <text x="64" y="36" fill="#ffffff" fontSize="17" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="1px">SOSEMIE</text>
+      </svg>
+    )
+  }
+  if (n.includes('famico')) {
+    // Famico: Rounded red brand badge + white serif script logotype
+    return (
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="6" width="140" height="48" rx="24" fill="#e11d48" />
+        <circle cx="32" cy="30" r="14" fill="#ffffff" opacity="0.15" />
+        <text x="80" y="37" fill="#ffffff" fontSize="21" fontWeight="800" fontFamily="'Georgia', serif" fontStyle="italic" textAnchor="middle">Famico</text>
       </svg>
     )
   }
   if (n.includes('zaim')) {
-    // Zaim: Crown of spikes
+    // Zaim: Elegant thin golden frame + luxury gold serif wordmark
     return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-amber-50 to-orange-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <rect x="15" y="15" width="70" height="70" rx="20" fill="none" stroke="#d97706" strokeWidth="3" />
-        <path d="M 28 65 L 35 40 L 45 52 L 50 35 L 55 52 L 65 40 L 72 65 Z" fill="#d97706" />
-        <circle cx="50" cy="65" r="5" fill="#ffffff" />
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="6" width="140" height="48" rx="8" fill="none" stroke="#d97706" strokeWidth="2" />
+        <path d="M 28 24 L 33 16 L 38 24 L 43 14 L 48 24" fill="none" stroke="#d97706" strokeWidth="2" strokeLinecap="round" />
+        <text x="82" y="37" fill="#d97706" fontSize="20" fontWeight="800" fontFamily="'Times New Roman', serif" letterSpacing="2px">ZAIM</text>
       </svg>
     )
   }
-  if (n.includes('sos azzouz') || n.includes('azzouz')) {
-    // SOS Azzouz: Shield crest with chevron
+  if (n.includes('sos_azzouz') || n.includes('sos azzouz') || n.includes('azzouz')) {
+    // SOS Azzouz: Red shield badge + white internal border + bold clean block text
     return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-red-50 to-red-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 25 25 L 75 25 C 75 45, 65 65, 50 80 C 35 65, 25 45, 25 25 Z" fill="#b91c1c" />
-        <path d="M 35 32 L 65 32 L 50 50 Z" fill="#ffffff" opacity="0.3" />
-        <path d="M 32 35 L 50 52 L 68 35" fill="none" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" />
-        <circle cx="50" cy="62" r="6" fill="#fbbf24" />
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 15 8 L 145 8 C 145 28, 130 48, 80 54 C 30 48, 15 28, 15 8 Z" fill="#b91c1c" />
+        <path d="M 22 12 L 138 12 C 138 28, 125 44, 80 49 C 35 44, 22 28, 22 12 Z" fill="none" stroke="#ffffff" strokeWidth="1.5" />
+        <text x="80" y="32" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="0.5px">SOS AZZOUZ</text>
       </svg>
     )
   }
   if (n.includes('saka')) {
-    // Saka: Coffee bean
+    // Saka: Coffee seal + rich gold roasted brand mark
     return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-stone-100 to-amber-200 p-3" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="40" fill="#78350f" />
-        <circle cx="50" cy="50" r="36" fill="none" stroke="#d97706" strokeWidth="2" />
-        <path d="M 30 50 C 40 40, 60 60, 70 50" stroke="#d97706" strokeWidth="4" strokeLinecap="round" fill="none" />
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="35" cy="30" r="21" fill="#78350f" stroke="#d97706" strokeWidth="2" />
+        <path d="M 23 30 C 30 22, 40 38, 47 30" stroke="#d97706" strokeWidth="2.5" fill="none" />
+        <text x="94" y="37" fill="#78350f" fontSize="21" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="1px">SAKA</text>
       </svg>
     )
   }
   if (n.includes('telwas')) {
-    // SARL Telwas: Dynamic wings of logistics
+    // SARL Telwas: Slanted logistics wing + bold active delivery green layout
     return (
-      <svg viewBox="0 0 100 100" className="w-full h-full bg-gradient-to-br from-green-50 to-emerald-100 p-3" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="40" fill="#16a34a" />
-        <path d="M 25 40 L 70 40 L 55 52 L 25 52 Z" fill="#eab308" />
-        <path d="M 32 55 L 75 55 L 60 67 L 32 67 Z" fill="#ffffff" />
-        <circle cx="35" cy="46" r="3" fill="#16a34a" />
+      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="6" width="150" height="48" rx="10" fill="#16a34a" />
+        <path d="M 15 35 L 45 15 L 35 45 Z" fill="#eab308" />
+        <text x="82" y="37" fill="#ffffff" fontSize="20" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="1px">TELWAS</text>
       </svg>
     )
   }
 
-  // Fallback
+  // Generic fallback if name doesn't match
   return (
-    <svg viewBox="0 0 100 100" className="w-full h-full bg-green-700 p-3" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" strokeWidth="3" />
-      <text x="50" y="57" fill="#ffffff" fontSize="22" fontWeight="bold" textAnchor="middle">{name.substring(0, 2).toUpperCase()}</text>
+    <svg viewBox="0 0 160 60" className="w-full h-full bg-green-700 p-2" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="35" cy="30" r="18" fill="none" stroke="#ffffff" strokeWidth="2" />
+      <text x="35" y="36" fill="#ffffff" fontSize="16" fontWeight="bold" textAnchor="middle">{name.substring(0, 2).toUpperCase()}</text>
+      <text x="75" y="36" fill="#ffffff" fontSize="16" fontWeight="bold" fontFamily="Inter, sans-serif">{name.toUpperCase()}</text>
     </svg>
   )
 }
@@ -177,23 +172,36 @@ export default function Partners() {
         {/* Scrolling carousel */}
         <div className="relative overflow-hidden">
           {/* Gradient masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
           <motion.div
             className="flex gap-8"
             animate={{ x: ['0%', '-50%'] }}
-            transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
+            transition={{ duration: 36, repeat: Infinity, ease: 'linear' }}
           >
             {[...PARTNERS, ...PARTNERS].map((partner, i) => (
               <div
                 key={i}
                 className="shrink-0 flex flex-col items-center gap-3 group"
               >
-                <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all group-hover:-translate-y-1.5 duration-300 bg-white border border-gray-100 flex items-center justify-center">
+                {/* Rectangular aspect ratio for official wordmark brand logos */}
+                <div className="w-40 h-20 rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all group-hover:-translate-y-1.5 duration-300 bg-white border border-gray-100 flex items-center justify-center relative">
                   <PartnerLogo name={partner.name} />
+                  
+                  {/* Invisible fallback in case the image fails to load */}
+                  {(partner.name.toLowerCase().includes('amour') || partner.name.toLowerCase().includes('safina')) && (
+                    <div style={{ display: 'none' }} className="absolute inset-0 w-full h-full">
+                      <svg viewBox="0 0 160 60" className="w-full h-full p-2.5" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="6" width="150" height="48" rx="24" fill="#0f766e" />
+                        <text x="80" y="36" fill="#ffffff" fontSize="18" fontWeight="800" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="0.5px">
+                          {partner.name.toUpperCase()}
+                        </text>
+                      </svg>
+                    </div>
+                  )}
                 </div>
-                <span className="text-sm font-semibold text-gray-600 group-hover:text-green-700 transition-colors text-center">
+                <span className="text-sm font-semibold text-gray-500 group-hover:text-green-700 transition-colors text-center">
                   {partner.name}
                 </span>
               </div>

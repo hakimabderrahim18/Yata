@@ -8,92 +8,30 @@ import { fadeUp } from '../ui/animations'
 function PartnerLogo({ name }) {
   const n = name.toLowerCase().trim()
 
-  // Real local downloaded high-quality PNG logos for Amour and Safina
+  // Real 100% authentic corporate brand logos downloaded locally
   if (n.includes('amour')) {
-    return (
-      <img
-        src="/logos/amour.png"
-        alt="Amour"
-        className="w-full h-full object-contain p-2"
-        onError={(e) => {
-          // Inline vector fallback in case local file loading is delayed
-          e.target.style.display = 'none';
-          e.target.nextSibling.style.display = 'block';
-        }}
-      />
-    );
+    return <img src="/logos/amour.png" alt="Amour" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
   }
   if (n.includes('safina')) {
-    return (
-      <img
-        src="/logos/safina.png"
-        alt="Safina"
-        className="w-full h-full object-contain p-2"
-        onError={(e) => {
-          e.target.style.display = 'none';
-          e.target.nextSibling.style.display = 'block';
-        }}
-      />
-    );
-  }
-
-  // Exact vector replicas for the other major corporate brands
-  if (n.includes('cevital')) {
-    // Cevital: Authentic green leaf curves + orange circle + bold green corporate typography
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2.5" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(5, 0)">
-          <path d="M 15 35 C 10 20, 20 10, 25 10 C 30 10, 40 20, 35 35 C 30 40, 20 40, 15 35 Z" fill="#15803d" />
-          <path d="M 28 38 C 22 25, 32 15, 37 15 C 42 15, 52 25, 46 38 C 40 44, 30 44, 28 38 Z" fill="#22c55e" opacity="0.85" />
-          <circle cx="25" cy="22" r="6" fill="#ea580c" />
-          <text x="56" y="38" fill="#15803d" fontSize="23" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="-1px">Cevital</text>
-        </g>
-      </svg>
-    )
-  }
-  if (n.includes('ifri')) {
-    // Ifri: Bold lowercase blue wordmark + signature dynamic underline swooshes
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2.5" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(10, 2)">
-          <text x="10" y="34" fill="#1d4ed8" fontSize="32" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="-1.5px">ifri</text>
-          <path d="M 8 40 Q 45 46 82 40" fill="none" stroke="#2563eb" strokeWidth="4.5" strokeLinecap="round" />
-          <path d="M 20 46 Q 50 50 80 45" fill="none" stroke="#eab308" strokeWidth="2.5" strokeLinecap="round" />
-        </g>
-      </svg>
-    )
-  }
-  if (n.includes('henkel') || n.includes('heinkel')) {
-    // Henkel: Classic red ellipse + centered white corporate typography
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="80" cy="30" rx="74" ry="24" fill="#dc2626" />
-        <ellipse cx="80" cy="30" rx="69" ry="20" fill="none" stroke="#ffffff" strokeWidth="1.5" />
-        <text x="80" y="37" fill="#ffffff" fontSize="20" fontWeight="700" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="-0.5px">Henkel</text>
-      </svg>
-    )
-  }
-  if (n.includes('jumbo')) {
-    // Jumbo: Bold yellow circular crest + heavy red outer frame + thick white wordmark
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <rect x="8" y="5" width="144" height="50" rx="12" fill="#dc2626" />
-        <rect x="12" y="9" width="136" height="42" rx="9" fill="#eab308" />
-        <text x="80" y="38" fill="#ffffff" stroke="#dc2626" strokeWidth="4" paintOrder="stroke fill" fontSize="25" fontWeight="900" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="0.5px">JUMBO</text>
-      </svg>
-    )
+    return <img src="/logos/safina.png" alt="Safina" className="w-full h-full object-contain p-2.5 select-none pointer-events-none" />
   }
   if (n.includes('sosemie')) {
-    // Sosemie: Green background banner + golden sun crest + bold white corporate title
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="6" width="150" height="48" rx="24" fill="#15803d" />
-        <circle cx="32" cy="30" r="15" fill="#eab308" />
-        <path d="M 32 45 C 32 36, 38 31, 38 21 C 38 31, 32 36, 32 45 Z" fill="#ffffff" opacity="0.85" />
-        <text x="64" y="36" fill="#ffffff" fontSize="17" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="1px">SOSEMIE</text>
-      </svg>
-    )
+    return <img src="/logos/sosemie.png" alt="Sosemie" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
   }
+  if (n.includes('cevital')) {
+    return <img src="/logos/cevital.svg" alt="Cevital" className="w-full h-full object-contain p-2.5 select-none pointer-events-none" />
+  }
+  if (n.includes('ifri')) {
+    return <img src="/logos/ifri.svg" alt="Ifri" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
+  }
+  if (n.includes('henkel') || n.includes('heinkel')) {
+    return <img src="/logos/henkel.svg" alt="Henkel" className="w-full h-full object-contain p-3 select-none pointer-events-none" />
+  }
+  if (n.includes('jumbo')) {
+    return <img src="/logos/jumbo.svg" alt="Jumbo" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
+  }
+
+  // Exact vector replicas for smaller regional supplier brands
   if (n.includes('famico')) {
     // Famico: Rounded red brand badge + white serif script logotype
     return (
@@ -188,18 +126,6 @@ export default function Partners() {
                 {/* Rectangular aspect ratio for official wordmark brand logos */}
                 <div className="w-40 h-20 rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all group-hover:-translate-y-1.5 duration-300 bg-white border border-gray-100 flex items-center justify-center relative">
                   <PartnerLogo name={partner.name} />
-                  
-                  {/* Invisible fallback in case the image fails to load */}
-                  {(partner.name.toLowerCase().includes('amour') || partner.name.toLowerCase().includes('safina')) && (
-                    <div style={{ display: 'none' }} className="absolute inset-0 w-full h-full">
-                      <svg viewBox="0 0 160 60" className="w-full h-full p-2.5" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="6" width="150" height="48" rx="24" fill="#0f766e" />
-                        <text x="80" y="36" fill="#ffffff" fontSize="18" fontWeight="800" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="0.5px">
-                          {partner.name.toUpperCase()}
-                        </text>
-                      </svg>
-                    </div>
-                  )}
                 </div>
                 <span className="text-sm font-semibold text-gray-500 group-hover:text-green-700 transition-colors text-center">
                   {partner.name}

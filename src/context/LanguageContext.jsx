@@ -340,7 +340,8 @@ const DICTIONARY = {
       { name: 'Cevital', logo: '' },
       { name: 'Ifri', logo: '' },
       { name: 'Zaim', logo: '' },
-      { name: 'SOS Azzouz', logo: '' },
+      { name: 'SOS', logo: '' },
+      { name: 'Azzouz', logo: '' },
       { name: 'Saka', logo: '' },
       { name: 'SARL Telwas', logo: '' },
     ]
@@ -682,7 +683,8 @@ const DICTIONARY = {
       { name: 'Cevital', logo: '' },
       { name: 'Ifri', logo: '' },
       { name: 'Zaim', logo: '' },
-      { name: 'SOS Azzouz', logo: '' },
+      { name: 'SOS', logo: '' },
+      { name: 'Azzouz', logo: '' },
       { name: 'Saka', logo: '' },
       { name: 'SARL Telwas', logo: '' },
     ]

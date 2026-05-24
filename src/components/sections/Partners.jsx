@@ -4,83 +4,56 @@ import SectionHeader from '../ui/SectionHeader'
 import { useLanguage } from '../../context/LanguageContext'
 import { fadeUp } from '../ui/animations'
 
-// Custom high-contrast, pixel-perfect replicas of the REAL supplier logos
+// Real 100% authentic corporate brand logos from the actual companies
 function PartnerLogo({ name }) {
   const n = name.toLowerCase().trim()
 
-  // Real 100% authentic corporate brand logos downloaded locally
+  let src = ''
+  let padding = 'p-2'
+
   if (n.includes('amour')) {
-    return <img src="/logos/amour.png" alt="Amour" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
-  }
-  if (n.includes('safina')) {
-    return <img src="/logos/safina.png" alt="Safina" className="w-full h-full object-contain p-2.5 select-none pointer-events-none" />
-  }
-  if (n.includes('sosemie')) {
-    return <img src="/logos/sosemie.png" alt="Sosemie" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
-  }
-  if (n.includes('cevital')) {
-    return <img src="/logos/cevital.svg" alt="Cevital" className="w-full h-full object-contain p-2.5 select-none pointer-events-none" />
-  }
-  if (n.includes('ifri')) {
-    return <img src="/logos/ifri.svg" alt="Ifri" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
-  }
-  if (n.includes('henkel') || n.includes('heinkel')) {
-    return <img src="/logos/henkel.svg" alt="Henkel" className="w-full h-full object-contain p-3 select-none pointer-events-none" />
-  }
-  if (n.includes('jumbo')) {
-    return <img src="/logos/jumbo.svg" alt="Jumbo" className="w-full h-full object-contain p-2 select-none pointer-events-none" />
+    src = '/logos/amour.png'
+    padding = 'p-2'
+  } else if (n.includes('safina')) {
+    src = '/logos/safina.png'
+    padding = 'p-2.5'
+  } else if (n.includes('sosemie')) {
+    src = '/logos/sosemie.png'
+    padding = 'p-2'
+  } else if (n.includes('cevital')) {
+    src = '/logos/cevital.svg'
+    padding = 'p-2.5'
+  } else if (n.includes('ifri')) {
+    src = '/logos/ifri.svg'
+    padding = 'p-2'
+  } else if (n.includes('henkel') || n.includes('heinkel')) {
+    src = '/logos/henkel.svg'
+    padding = 'p-3'
+  } else if (n.includes('jumbo')) {
+    src = '/logos/jumbo.svg'
+    padding = 'p-2'
+  } else if (n.includes('azzouz')) {
+    src = '/logos/azzouz.jpg'
+    padding = 'p-2'
+  } else if (n.includes('famico')) {
+    src = '/logos/famico.png'
+    padding = 'p-2'
+  } else if (n.includes('zaim')) {
+    src = '/logos/zaim.png'
+    padding = 'p-2'
+  } else if (n.includes('sos')) {
+    src = '/logos/sos.png'
+    padding = 'p-2'
+  } else if (n.includes('saka')) {
+    src = '/logos/saka.png'
+    padding = 'p-2'
+  } else if (n.includes('telwas')) {
+    src = '/logos/telwas.png'
+    padding = 'p-2'
   }
 
-  // Exact vector replicas for smaller regional supplier brands
-  if (n.includes('famico')) {
-    // Famico: Rounded red brand badge + white serif script logotype
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="6" width="140" height="48" rx="24" fill="#e11d48" />
-        <circle cx="32" cy="30" r="14" fill="#ffffff" opacity="0.15" />
-        <text x="80" y="37" fill="#ffffff" fontSize="21" fontWeight="800" fontFamily="'Georgia', serif" fontStyle="italic" textAnchor="middle">Famico</text>
-      </svg>
-    )
-  }
-  if (n.includes('zaim')) {
-    // Zaim: Elegant thin golden frame + luxury gold serif wordmark
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="6" width="140" height="48" rx="8" fill="none" stroke="#d97706" strokeWidth="2" />
-        <path d="M 28 24 L 33 16 L 38 24 L 43 14 L 48 24" fill="none" stroke="#d97706" strokeWidth="2" strokeLinecap="round" />
-        <text x="82" y="37" fill="#d97706" fontSize="20" fontWeight="800" fontFamily="'Times New Roman', serif" letterSpacing="2px">ZAIM</text>
-      </svg>
-    )
-  }
-  if (n.includes('sos_azzouz') || n.includes('sos azzouz') || n.includes('azzouz')) {
-    // SOS Azzouz: Red shield badge + white internal border + bold clean block text
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 15 8 L 145 8 C 145 28, 130 48, 80 54 C 30 48, 15 28, 15 8 Z" fill="#b91c1c" />
-        <path d="M 22 12 L 138 12 C 138 28, 125 44, 80 49 C 35 44, 22 28, 22 12 Z" fill="none" stroke="#ffffff" strokeWidth="1.5" />
-        <text x="80" y="32" fill="#ffffff" fontSize="15" fontWeight="900" fontFamily="Inter, sans-serif" textAnchor="middle" letterSpacing="0.5px">SOS AZZOUZ</text>
-      </svg>
-    )
-  }
-  if (n.includes('saka')) {
-    // Saka: Coffee seal + rich gold roasted brand mark
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="35" cy="30" r="21" fill="#78350f" stroke="#d97706" strokeWidth="2" />
-        <path d="M 23 30 C 30 22, 40 38, 47 30" stroke="#d97706" strokeWidth="2.5" fill="none" />
-        <text x="94" y="37" fill="#78350f" fontSize="21" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="1px">SAKA</text>
-      </svg>
-    )
-  }
-  if (n.includes('telwas')) {
-    // SARL Telwas: Slanted logistics wing + bold active delivery green layout
-    return (
-      <svg viewBox="0 0 160 60" className="w-full h-full p-2" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="6" width="150" height="48" rx="10" fill="#16a34a" />
-        <path d="M 15 35 L 45 15 L 35 45 Z" fill="#eab308" />
-        <text x="82" y="37" fill="#ffffff" fontSize="20" fontWeight="900" fontFamily="Inter, sans-serif" letterSpacing="1px">TELWAS</text>
-      </svg>
-    )
+  if (src) {
+    return <img src={src} alt={name} className={`w-full h-full object-contain ${padding} select-none pointer-events-none`} />
   }
 
   // Generic fallback if name doesn't match

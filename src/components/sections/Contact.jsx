@@ -125,6 +125,27 @@ export default function Contact() {
                 </div>
               </div>
             </div>
+
+            {/* QR Code Card */}
+            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col sm:flex-row items-center gap-5 group">
+              <div className="w-24 h-24 rounded-xl overflow-hidden border border-gray-100 shrink-0 shadow-inner">
+                <img
+                  src="/YATAQR.jpg"
+                  alt="QR Code YATA"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="text-center sm:text-start">
+                <h4 className="font-bold text-gray-900 text-sm mb-1">
+                  {isRtl ? 'رمز الاستجابة السريعة YATA' : 'YATA Scan-to-Connect'}
+                </h4>
+                <p className="text-gray-500 text-xs leading-relaxed">
+                  {isRtl
+                    ? 'امسح هذا الرمز باستخدام هاتفك للوصول الفوري إلى واتساب، موقعنا، وروابطنا الرسمية.'
+                    : 'Scannez ce code avec votre téléphone pour accéder instantanément à notre WhatsApp et nos liens officiels.'}
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           {/* Form */}

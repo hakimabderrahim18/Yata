@@ -304,7 +304,7 @@ const DICTIONARY = {
     ],
     TIMELINE: [
       { year: '2014', title: 'Fondation', desc: 'Création de YATA Distribution à Tiaret avec une vision locale.' },
-      { year: '2017', title: 'Expansion Régionale', desc: 'Extension à 10 wilayas du centre-ouest algérien.' },
+      { year: '2017', title: 'Expansion Régionale', desc: 'Extension à 3 wilayas du centre-ouest algérien.' },
       { year: '2020', title: 'Modernisation', desc: "Acquisition d'une flotte réfrigérée et d'un entrepôt moderne de 5 000 m²." },
       { year: '2024', title: 'Leadership', desc: 'Couverture de 3 wilayas, 500+ clients, leader régional.' },
     ],
@@ -653,7 +653,7 @@ const DICTIONARY = {
     ],
     TIMELINE: [
       { year: '2014', title: 'التأسيس', desc: 'تأسيس شركة ياتا للتوزيع في تيارت برؤية محلية.' },
-      { year: '2017', title: 'التوسع الإقليمي', desc: 'التوسع إلى 10 ولايات في الوسط الغربي الجزائري.' },
+      { year: '2017', title: 'التوسع الإقليمي', desc: 'التوسع إلى 3 ولايات في الوسط الغربي الجزائري.' },
       { year: '2020', title: 'التحديث', desc: "الاستحواذ على أسطول نقل مبرد ومستودع حديث بمساحة 5000 متر مربع." },
       { year: '2024', title: 'الريادة', desc: 'تغطية 3 ولايات، أكثر من 500 عميل، وريادة إقليمية.' },
     ],

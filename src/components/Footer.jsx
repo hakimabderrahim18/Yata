@@ -105,19 +105,26 @@ export default function Footer() {
               ))}
             </div>
             {/* QR Code Scan Footer */}
-            <div className="mt-6 pt-5 border-t border-white/10 flex items-center gap-4 group">
-              <div className="w-14 h-14 rounded-xl overflow-hidden border border-white/20 bg-white/5 p-1 shrink-0">
-                <img
-                  src="/YATAQR.jpg"
-                  alt="QR Code YATA"
-                  className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div>
-                <span className="block text-white font-bold text-xs uppercase tracking-wider mb-0.5">YATA Link</span>
-                <span className="block text-green-300 text-[10px] leading-relaxed">
-                  {isRtl ? 'امسح الرمز للتواصل السريع' : 'Scannez pour un accès rapide'}
-                </span>
+            <div className="mt-8 pt-6 border-t border-white/10 text-start group">
+              <span className="block text-white font-extrabold text-xs uppercase tracking-widest mb-3.5">
+                {isRtl ? 'رمز الاستجابة السريعة (QR)' : 'QR Code Officiel'}
+              </span>
+              <div className="flex items-start gap-4">
+                <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-white/20 bg-white p-1.5 shrink-0 shadow-lg group-hover:border-amber-400 transition-colors duration-300">
+                  <img
+                    src="/YATAQR.jpg"
+                    alt="QR Code YATA"
+                    className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="pt-1">
+                  <span className="block text-amber-400 font-bold text-xs mb-1">YATA Link</span>
+                  <p className="text-green-300 text-[10px] leading-relaxed max-w-[150px]">
+                    {isRtl
+                      ? 'امسح هذا الرمز للوصول الفوري إلى واتساب، وروابطنا الرسمية.'
+                      : 'Scannez ce code pour accéder instantanément à notre WhatsApp et liens officiels.'}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

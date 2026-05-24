@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#3b82f6" />
+      <stop offset="50%" stopColor="#2563eb" />
+      <stop offset="100%" stopColor="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="greenGradFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#4ade80" />
+      <stop offset="50%" stopColor="#22c55e" />
+      <stop offset="100%" stopColor="#15803d" />
+    </linearGradient>
+    <linearGradient id="yellowGradFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#fde047" />
+      <stop offset="50%" stopColor="#eab308" />
+      <stop offset="100%" stopColor="#ca8a04" />
+    </linearGradient>
+    <linearGradient id="orangeRedGradFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ff7e47" />
+      <stop offset="50%" stopColor="#ef4444" />
+      <stop offset="100%" stopColor="#b91c1c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Blue head circle -->
+  <circle cx="50" cy="22" r="10" fill="url(#blueGradFav)" />
+
+  <!-- Green arm (left) -->
+  <path d="M 47 38 C 36 29, 23 30, 23 40 C 23 48, 33 49, 44 44 C 47 42, 48 40, 47 38 Z" fill="url(#greenGradFav)" />
+
+  <!-- Yellow arm (right & diagonal body) -->
+  <path d="M 48 35 C 58 25, 70 17, 77 18 C 63 28, 54 44, 52 54 C 50 64, 53 74, 57 80 C 53 70, 50 58, 48 35 Z" fill="url(#yellowGradFav)" />
+
+  <!-- Orange-Red bottom loop -->
+  <path d="M 50 54 C 46 64, 38 72, 39 78 C 41 83, 48 83, 52 78 C 53 72, 51 62, 50 54 Z" fill="url(#orangeRedGradFav)" />
+</svg>

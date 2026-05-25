@@ -23,8 +23,12 @@ export default function Services() {
   const { SERVICES, t } = useLanguage()
 
   return (
-    <section id="services" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 bg-gradient-to-b from-white via-[#f6faf8] to-white relative overflow-hidden">
+      {/* Premium mint/sage ambient glows */}
+      <div className="absolute top-1/4 right-0 w-80 h-80 bg-green-500/3 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-teal-500/4 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <SectionHeader
             eyebrow={t('servicesEyebrow')}

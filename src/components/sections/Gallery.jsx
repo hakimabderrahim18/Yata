@@ -10,8 +10,12 @@ export default function Gallery() {
   const { GALLERY_IMAGES, t } = useLanguage()
 
   return (
-    <section id="gallery" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" className="py-24 bg-gradient-to-b from-white via-[#f8fafc] to-white relative overflow-hidden">
+      {/* Modern cold slate/blue ambient glows */}
+      <div className="absolute top-1/4 left-0 w-80 h-80 bg-blue-500/3 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-teal-500/3 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <SectionHeader
             eyebrow={t('galleryEyebrow')}

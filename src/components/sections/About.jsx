@@ -28,8 +28,12 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="py-24 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-gradient-to-b from-white via-[#fcfbf9] to-white overflow-hidden relative">
+      {/* Premium ambient glows */}
+      <div className="absolute top-1/3 left-10 w-72 h-72 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/3 right-10 w-80 h-80 bg-green-500/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <SectionHeader
             eyebrow={t('aboutUs')}

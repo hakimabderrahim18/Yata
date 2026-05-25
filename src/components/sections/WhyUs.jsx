@@ -13,10 +13,10 @@ export default function WhyUs() {
   const { WHY_US, whyUsStats, t } = useLanguage()
 
   return (
-    <section id="why-us" className="py-24 bg-gradient-to-br from-green-950 via-green-900 to-green-800 relative overflow-hidden">
+    <section id="why-us" className="py-24 bg-gradient-to-br from-[#021f17] via-[#052e24] to-[#0b4235] relative overflow-hidden">
       {/* Decorative circles */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
       <Particles count={25} color="rgba(245, 158, 11, 0.15)" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

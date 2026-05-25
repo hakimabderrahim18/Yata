@@ -176,7 +176,7 @@ export default function Partners() {
   const row2Partners = PARTNERS.slice(7)
 
   return (
-    <section id="partners" className="py-24 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/20 overflow-hidden relative">
+    <section id="partners" className="py-24 bg-gradient-to-b from-white via-[#faf9f6] to-white overflow-hidden relative">
       
       {/* Self-contained CSS for high-performance GPU-accelerated twin endless scrolling */}
       <style dangerouslySetInnerHTML={{ __html: `

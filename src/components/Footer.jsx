@@ -35,7 +35,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-green-950 text-white">
+    <footer className="bg-gradient-to-br from-[#01140f] to-[#03241b] text-white border-t border-white/5">
       {/* Top section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-start">
         <div className="grid md:grid-cols-3 gap-12">

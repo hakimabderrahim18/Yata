@@ -8,8 +8,12 @@ export default function Coverage() {
   const { WILAYAS, coverageCards, t, isRtl } = useLanguage()
 
   return (
-    <section id="coverage" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="coverage" className="py-24 bg-gradient-to-b from-white via-[#fffbf2] to-white overflow-hidden relative">
+      {/* Warm honey-gold and green ambient glows */}
+      <div className="absolute top-1/3 left-0 w-80 h-80 bg-amber-500/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-green-500/3 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <SectionHeader
             eyebrow={t('coverageEyebrow')}

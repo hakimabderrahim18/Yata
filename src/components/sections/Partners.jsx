@@ -464,6 +464,13 @@ export default function Partners() {
         </div>
 
       </div>
+
+      {/* Elegant Divider Line */}
+      <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none z-10">
+        <div className="w-full max-w-5xl h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b] border border-white" />
+        </div>
+      </div>
     </section>
   )
 }

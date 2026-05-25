@@ -17,9 +17,6 @@ const DICTIONARY = {
     heroSubtitleStart: "Votre partenaire de confiance dans la ",
     heroSubtitleHighlight: "distribution alimentaire",
     heroSubtitleEnd: " — du producteur à votre commerce ou domicile, partout en Algérie.",
-    exclusiveOffer: "Offre Exclusive",
-    featuredProduct: "Produit vedette",
-    getOffer: "Profiter de l'offre →",
     hq: "HQ",
     whatsappLabel: "Contacter sur WhatsApp",
     viewOnGoogleMaps: "Voir sur Google Maps →",
@@ -216,22 +213,6 @@ const DICTIONARY = {
         description: "Conserves, plats préparés, snacks et produits d'épicerie emballés.",
       },
     ],
-    PROMO: {
-      title: 'Pack Grossiste',
-      highlight: 'Boissons Premium — Été 2026',
-      description:
-        'Profitez de notre offre exclusive sur les boissons gazeuses et jus naturels importés. Commande en palettes complètes avec livraison prioritaire dans toute la région.',
-      product: 'Assortiment Boissons Premium',
-      image: '/YATA2.jpg',
-      discount: '-15%',
-      urgency: "Offre valable jusqu'au 30 Juin 2026 — Stock limité",
-      perks: [
-        'Livraison gratuite à partir de 5 palettes',
-        'Prix dégressifs selon les quantités commandées',
-        'Disponible pour supermarchés, épiceries & hôtels',
-        'Service après-vente dédié inclus',
-      ],
-    },
     WHY_US: [
       {
         icon: 'Zap',
@@ -360,9 +341,6 @@ const DICTIONARY = {
     heroSubtitleStart: "شريككم الموثوق في ",
     heroSubtitleHighlight: "توزيع المواد الغذائية",
     heroSubtitleEnd: " — من المنتج إلى متجركم أو منزلكم، في جميع أنحاء الجزائر.",
-    exclusiveOffer: "عرض حصري",
-    featuredProduct: "منتج مميز",
-    getOffer: "استفد من العرض الآن ←",
     hq: "المقر الرئيسي",
     whatsappLabel: "اتصل بنا عبر واتساب",
     viewOnGoogleMaps: "عرض على خرائط Google ←",
@@ -559,22 +537,6 @@ const DICTIONARY = {
         description: 'معلبات، أطباق جاهزة، مقرمشات ومنتجات بقالة مغلفة.',
       },
     ],
-    PROMO: {
-      title: 'باقة الجملة',
-      highlight: 'مشروبات ممتازة — صيف 2026',
-      description:
-        'استفيدوا من عرضنا الحصري على المشروبات الغازية والعصائر الطبيعية المستوردة. الطلب بالمنصات الكاملة مع توصيل ذو أولوية في جميع أنحاء المنطقة.',
-      product: 'تشكيلة مشروبات ممتازة',
-      image: '/YATA2.jpg',
-      discount: '-15%',
-      urgency: 'العرض ساري حتى 30 جوان 2026 — الكمية محدودة',
-      perks: [
-        'توصيل مجاني ابتداءً من 5 منصات',
-        'أسعار تنازلية حسب الكميات المطلوبة',
-        'متوفر للسوبرماركت والبقالات والفنادق',
-        'خدمة ما بعد البيع مخصصة متضمنة',
-      ],
-    },
     WHY_US: [
       {
         icon: 'Zap',

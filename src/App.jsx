@@ -6,8 +6,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Services from './components/sections/Services'
-
-import Promo from './components/sections/Promo'
 import WhyUs from './components/sections/WhyUs'
 import Coverage from './components/sections/Coverage'
 import Gallery from './components/sections/Gallery'
@@ -21,7 +19,6 @@ function HomePage() {
     <>
       <Hero />
       <About />
-      <Promo />
       <Services />
       <WhyUs />
       <Coverage />
@@ -213,4 +210,3 @@ export default function App() {
     </div>
   )
 }
-

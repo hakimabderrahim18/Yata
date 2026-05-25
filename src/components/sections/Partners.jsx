@@ -64,11 +64,6 @@ const BRAND_THEMES = {
     badge: 'bg-red-50 text-red-700 border-red-200/50',
     colorCode: 'rgba(239,68,68,0.03)'
   },
-  saka: {
-    glow: 'group-hover:shadow-[0_0_25px_rgba(245,158,11,0.15)] group-hover:border-amber-400/50',
-    badge: 'bg-amber-50 text-amber-700 border-amber-200/50',
-    colorCode: 'rgba(245,158,11,0.03)'
-  },
   'sarl telwas': {
     glow: 'group-hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] group-hover:border-emerald-400/50',
     badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/50',
@@ -121,9 +116,6 @@ function PartnerLogo({ name, className = '' }) {
   } else if (n.includes('sos')) {
     src = '/logos/sos.svg'
     padding = 'p-3.5'
-  } else if (n.includes('saka')) {
-    src = '/logos/saka.svg'
-    padding = 'p-3'
   } else if (n.includes('telwas')) {
     src = '/logos/telwas.svg'
     padding = 'p-3'

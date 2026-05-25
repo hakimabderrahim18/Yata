@@ -333,7 +333,6 @@ const DICTIONARY = {
       { name: 'Zaim', logo: '', category: 'grocery', description: "Semoules fines, moyennes, grosses et pâtes pour tous les repas." },
       { name: 'SOS', logo: '', category: 'grocery', description: "Riz SOS de qualité supérieure, légumes secs triés et emballés." },
       { name: 'Azzouz', logo: '', category: 'grocery', description: "Farines et semoules issues des meilleurs moulins traditionnels." },
-      { name: 'Saka', logo: '', category: 'grocery', description: "Cafés traditionnels moulus et en grains à l'arôme intense." },
       { name: 'SARL Telwas', logo: '', category: 'beverage', description: "Boissons rafraîchissantes, concentré de tomate et conserves premium." },
       { name: 'Hamoud Boualem', logo: '', category: 'beverage', description: "Boissons gazeuses traditionnelles, sirops et jus de fruits depuis 1878." }
     ]
@@ -668,7 +667,6 @@ const DICTIONARY = {
       { name: 'Zaim', logo: '', category: 'grocery', description: "سميد رقيق، متوسط وخشن وعجائن غذائية لمختلف الوجبات." },
       { name: 'SOS', logo: '', category: 'grocery', description: "أرز SOS عالي الجودة وبقوليات جافة منتقاة ومعبأة بعناية." },
       { name: 'Azzouz', logo: '', category: 'grocery', description: "فرينة وسميد من أجود المطاحن التقليدية والمحلية." },
-      { name: 'Saka', logo: '', category: 'grocery', description: "قهوة تقليدية مطحونة وحبوب بن ذات رائحة ونكهة مكثفة." },
       { name: 'SARL Telwas', logo: '', category: 'beverage', description: "مشروبات منعشة، مركز الطماطم ومعلبات غذائية ممتازة." },
       { name: 'Hamoud Boualem', logo: '', category: 'beverage', description: "مشروبات غازية تقليدية، شراب مركز وعصائر فواكه منذ عام 1878." }
     ]

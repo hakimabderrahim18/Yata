@@ -12,7 +12,7 @@ function PartnerLogo({ name }) {
   let padding = 'p-2'
 
   if (n.includes('amour')) {
-    src = '/logos/amour.png'
+    src = '/logos/amor benamor.jpg'
     padding = 'p-2'
   } else if (n.includes('safina')) {
     src = '/logos/safina.png'
@@ -24,19 +24,19 @@ function PartnerLogo({ name }) {
     src = '/logos/cevital.svg'
     padding = 'p-2.5'
   } else if (n.includes('ifri')) {
-    src = '/logos/ifri.svg'
+    src = '/logos/IFRI-logo.png'
     padding = 'p-2'
   } else if (n.includes('henkel') || n.includes('heinkel')) {
     src = '/logos/henkel.svg'
     padding = 'p-3'
   } else if (n.includes('jumbo')) {
-    src = '/logos/jumbo.png'
+    src = '/logos/jumbo.jpg'
     padding = 'p-2'
   } else if (n.includes('azzouz')) {
     src = '/logos/azzouz.jpg'
     padding = 'p-2'
   } else if (n.includes('famico')) {
-    src = '/logos/famico.png'
+    src = '/logos/famico.jpg'
     padding = 'p-2'
   } else if (n.includes('zaim')) {
     src = '/logos/zaim.png'

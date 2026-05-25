@@ -74,6 +74,11 @@ const BRAND_THEMES = {
     badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/50',
     colorCode: 'rgba(16,185,129,0.03)'
   },
+  'hamoud boualem': {
+    glow: 'group-hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] group-hover:border-emerald-400/50',
+    badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/50',
+    colorCode: 'rgba(16,185,129,0.03)'
+  },
 }
 
 // Real 100% authentic corporate brand logos from the actual companies
@@ -122,6 +127,9 @@ function PartnerLogo({ name, className = '' }) {
   } else if (n.includes('telwas')) {
     src = '/logos/telwas.png'
     padding = 'p-3'
+  } else if (n.includes('hamoud') || n.includes('boualem')) {
+    src = '/logos/hamoud_boualem_spa_logo.jpg'
+    padding = 'p-3.5'
   }
 
   if (src) {
@@ -163,7 +171,7 @@ export default function Partners() {
 
   // Group partners for the double scrolling rows
   // Row 1 (scrolling left): First 7 partners
-  // Row 2 (scrolling right): Remaining 6 partners
+  // Row 2 (scrolling right): Remaining 7 partners
   const row1Partners = PARTNERS.slice(0, 7)
   const row2Partners = PARTNERS.slice(7)
 

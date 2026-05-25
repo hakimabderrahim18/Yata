@@ -140,7 +140,7 @@ const DICTIONARY = {
       { label: 'Contact', href: '#contact' },
     ],
     STATS: [
-      { value: 500, suffix: '+', label: 'Clients Actifs' },
+      { value: 1700, suffix: '+', label: 'Clients Actifs' },
       { value: 1200, suffix: '+', label: 'Produits Distribués' },
       { value: 5, suffix: ' Wilayas', label: 'Couverture Régionale' },
       { value: 10, suffix: ' Ans', label: "D'expérience" },
@@ -295,7 +295,7 @@ const DICTIONARY = {
       { year: '2014', title: 'Fondation', desc: 'Création de YATA Distribution à Tiaret avec une vision locale.' },
       { year: '2017', title: 'Expansion Régionale', desc: 'Extension à 5 wilayas clés du territoire national.' },
       { year: '2020', title: 'Modernisation', desc: "Acquisition d'une flotte réfrigérée et d'un entrepôt moderne de 5 000 m²." },
-      { year: '2024', title: 'Leadership', desc: 'Couverture de 5 wilayas, 500+ clients, leader régional.' },
+      { year: '2024', title: 'Leadership', desc: 'Couverture de 5 wilayas, 1700+ clients, leader régional.' },
     ],
     CONTACT_INFO: [
       {
@@ -483,7 +483,7 @@ const DICTIONARY = {
       { label: 'اتصل بنا', href: '#contact' },
     ],
     STATS: [
-      { value: 500, suffix: '+', label: 'عملاء نشطون' },
+      { value: 1700, suffix: '+', label: 'عملاء نشطون' },
       { value: 1200, suffix: '+', label: 'منتجات موزعة' },
       { value: 5, suffix: ' ولايات', label: 'تغطية إقليمية' },
       { value: 10, suffix: ' سنوات', label: 'خبرة' },
@@ -638,7 +638,7 @@ const DICTIONARY = {
       { year: '2014', title: 'التأسيس', desc: 'تأسيس شركة ياتا للتوزيع في تيارت برؤية محلية.' },
       { year: '2017', title: 'التوسع الإقليمي', desc: 'التوسع إلى 5 ولايات رئيسية في الوطن.' },
       { year: '2020', title: 'التحديث', desc: "الاستحواذ على أسطول نقل مبرد ومستودع حديث بمساحة 5000 متر مربع." },
-      { year: '2024', title: 'الريادة', desc: 'تغطية 5 ولايات، أكثر من 500 عميل، وريادة إقليمية.' },
+      { year: '2024', title: 'الريادة', desc: 'تغطية 5 ولايات، أكثر من 1700 عميل، وريادة إقليمية.' },
     ],
     CONTACT_INFO: [
       {

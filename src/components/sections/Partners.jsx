@@ -89,46 +89,46 @@ function PartnerLogo({ name, className = '' }) {
   let padding = 'p-3'
 
   if (n.includes('amour')) {
-    src = '/logos/amor benamor.jpg'
+    src = '/logos/amor benamor.svg'
     padding = 'p-3.5'
   } else if (n.includes('safina')) {
-    src = '/logos/safina.png'
+    src = '/logos/safina.svg'
     padding = 'p-4'
   } else if (n.includes('sosemie')) {
-    src = '/logos/sosemie.png'
+    src = '/logos/sosemie.svg'
     padding = 'p-3'
   } else if (n.includes('cevital')) {
     src = '/logos/cevital.svg'
     padding = 'p-4'
   } else if (n.includes('ifri')) {
-    src = '/logos/IFRI-logo.png'
+    src = '/logos/IFRI-logo.svg'
     padding = 'p-3'
   } else if (n.includes('henkel') || n.includes('heinkel')) {
     src = '/logos/henkel.svg'
     padding = 'p-4.5'
   } else if (n.includes('jumbo')) {
-    src = '/logos/jumbo.jpg'
+    src = '/logos/jumbo.svg'
     padding = 'p-3'
   } else if (n.includes('azzouz')) {
-    src = '/logos/azzouz.jpg'
+    src = '/logos/azzouz.svg'
     padding = 'p-3'
   } else if (n.includes('famico')) {
-    src = '/logos/famico.jpg'
+    src = '/logos/famico.svg'
     padding = 'p-3'
   } else if (n.includes('zaim')) {
-    src = '/logos/zaim.png'
+    src = '/logos/zaim.svg'
     padding = 'p-3.5'
   } else if (n.includes('sos')) {
-    src = '/logos/sos.png'
+    src = '/logos/sos.svg'
     padding = 'p-3.5'
   } else if (n.includes('saka')) {
-    src = '/logos/saka.png'
+    src = '/logos/saka.svg'
     padding = 'p-3'
   } else if (n.includes('telwas')) {
-    src = '/logos/telwas.png'
+    src = '/logos/telwas.svg'
     padding = 'p-3'
   } else if (n.includes('hamoud') || n.includes('boualem')) {
-    src = '/logos/hamoud_boualem_spa_logo.jpg'
+    src = '/logos/hamoud_boualem_spa_logo.svg'
     padding = 'p-3.5'
   }
 

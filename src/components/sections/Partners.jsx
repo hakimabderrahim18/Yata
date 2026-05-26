@@ -74,7 +74,7 @@ function PartnerLogo({ name, className = '' }) {
   let padding = 'p-3'
 
   if (n.includes('amour')) {
-    src = '/logos/amour.svg'
+    src = '/logos/amour.jpg'
     padding = 'p-3.5'
   } else if (n.includes('safina')) {
     src = '/logos/safina.svg'
@@ -101,7 +101,7 @@ function PartnerLogo({ name, className = '' }) {
     src = '/logos/zaim.svg'
     padding = 'p-3.5'
   } else if (n.includes('sos')) {
-    src = '/logos/sos.svg'
+    src = '/logos/sos.png'
     padding = 'p-3.5'
   } else if (n.includes('hamoud') || n.includes('boualem')) {
     src = '/logos/hamoud_boualem_spa_logo.svg'

@@ -62,8 +62,8 @@ const DICTIONARY = {
     whyUsStats: [
       { value: '98%', label: 'Taux de satisfaction client' },
       { value: 'Rapide', label: 'Livraison à domicile & commerce' },
-      { value: '5 000 m²', label: "Capacité d'entrepôt" },
-      { value: '30+', label: 'Véhicules de livraison' },
+      { value: '10 200 m²', label: "Capacité d'entrepôt" },
+      { value: '50+', label: 'Véhicules de livraison' },
     ],
 
     // Coverage Section
@@ -72,7 +72,7 @@ const DICTIONARY = {
     coverageSubtitle: "Depuis notre siège à Tiaret, notre réseau de livraison s'étend sur 5 wilayas, assurant un service rapide et fiable.",
     wilayasCovered: "Wilayas couvertes",
     directDelivery: "Livraison directe dans toutes ces zones",
-    vehiclesCount: "30+ véhicules",
+    vehiclesCount: "50+ véhicules",
     coverageCards: [
       { label: 'Livraison Rapide', desc: 'Sur toutes les zones couvertes' },
       { label: 'Livraison directe', desc: 'Livraison à domicile et commerce' },
@@ -285,7 +285,7 @@ const DICTIONARY = {
     TIMELINE: [
       { year: '2014', title: 'Fondation', desc: 'Création de YATA Distribution à Tiaret avec une vision locale.' },
       { year: '2017', title: 'Expansion Régionale', desc: 'Extension à 5 wilayas clés du territoire national.' },
-      { year: '2020', title: 'Modernisation', desc: "Acquisition d'une flotte réfrigérée et d'un entrepôt moderne de 5 000 m²." },
+      { year: '2020', title: 'Modernisation', desc: "Acquisition d'une flotte réfrigérée et d'un entrepôt moderne de 10 200 m²." },
       { year: '2024', title: 'Leadership', desc: 'Couverture de 5 wilayas, 1700+ clients, leader régional.' },
     ],
     CONTACT_INFO: [
@@ -332,8 +332,6 @@ const DICTIONARY = {
       { name: 'Ifri', logo: '', category: 'beverage', description: "Eau minérale naturelle pure, boissons gazeuses fruitées et jus sains." },
       { name: 'Zaim', logo: '', category: 'grocery', description: "Semoules fines, moyennes, grosses et pâtes pour tous les repas." },
       { name: 'SOS', logo: '', category: 'grocery', description: "Riz SOS de qualité supérieure, légumes secs triés et emballés." },
-      { name: 'Azzouz', logo: '', category: 'grocery', description: "Farines et semoules issues des meilleurs moulins traditionnels." },
-      { name: 'SARL Telwas', logo: '', category: 'beverage', description: "Boissons rafraîchissantes, concentré de tomate et conserves premium." },
       { name: 'Hamoud Boualem', logo: '', category: 'beverage', description: "Boissons gazeuses traditionnelles, sirops et jus de fruits depuis 1878." }
     ]
   },
@@ -396,8 +394,8 @@ const DICTIONARY = {
     whyUsStats: [
       { value: '98%', label: 'معدل رضا العملاء' },
       { value: 'سريعة', label: 'توصيل للمنازل والمحلات' },
-      { value: '5,000 م²', label: "مساحة المستودعات" },
-      { value: '30+', label: 'مركبة توزيع' },
+      { value: '10,200 م²', label: "مساحة المستودعات" },
+      { value: '50+', label: 'مركبة توزيع' },
     ],
 
     // Coverage Section
@@ -406,7 +404,7 @@ const DICTIONARY = {
     coverageSubtitle: "من مقرنا في تيارت، يمتد شبكة توزيعنا على 5 ولايات، مما يضمن خدمة سريعة وموثوقة.",
     wilayasCovered: "الولايات المغطاة",
     directDelivery: "توصيل مباشر إلى كل هذه المناطق",
-    vehiclesCount: "أكثر من 30 مركبة",
+    vehiclesCount: "أكثر من 50 مركبة",
     coverageCards: [
       { label: 'توصيل سريع للغاية', desc: 'خدمة توصيل سريعة وموثوقة' },
       { label: 'توصيل مباشر', desc: 'توصيل للمنازل والمحلات التجارية' },
@@ -619,7 +617,7 @@ const DICTIONARY = {
     TIMELINE: [
       { year: '2014', title: 'التأسيس', desc: 'تأسيس شركة ياتا للتوزيع في تيارت برؤية محلية.' },
       { year: '2017', title: 'التوسع الإقليمي', desc: 'التوسع إلى 5 ولايات رئيسية في الوطن.' },
-      { year: '2020', title: 'التحديث', desc: "الاستحواذ على أسطول نقل مبرد ومستودع حديث بمساحة 5000 متر مربع." },
+      { year: '2020', title: 'التحديث', desc: "الاستحواذ على أسطول نقل مبرد ومستودع حديث بمساحة 10200 متر مربع." },
       { year: '2024', title: 'الريادة', desc: 'تغطية 5 ولايات، أكثر من 1700 عميل، وريادة إقليمية.' },
     ],
     CONTACT_INFO: [
@@ -666,8 +664,6 @@ const DICTIONARY = {
       { name: 'Ifri', logo: '', category: 'beverage', description: "مياه معدنية طبيعية نقية، مشروبات غازية بنكهات الفواكه وعصائر صحية." },
       { name: 'Zaim', logo: '', category: 'grocery', description: "سميد رقيق، متوسط وخشن وعجائن غذائية لمختلف الوجبات." },
       { name: 'SOS', logo: '', category: 'grocery', description: "أرز SOS عالي الجودة وبقوليات جافة منتقاة ومعبأة بعناية." },
-      { name: 'Azzouz', logo: '', category: 'grocery', description: "فرينة وسميد من أجود المطاحن التقليدية والمحلية." },
-      { name: 'SARL Telwas', logo: '', category: 'beverage', description: "مشروبات منعشة، مركز الطماطم ومعلبات غذائية ممتازة." },
       { name: 'Hamoud Boualem', logo: '', category: 'beverage', description: "مشروبات غازية تقليدية، شراب مركز وعصائر فواكه منذ عام 1878." }
     ]
   }

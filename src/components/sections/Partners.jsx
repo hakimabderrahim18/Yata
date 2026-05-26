@@ -59,16 +59,6 @@ const BRAND_THEMES = {
     badge: 'bg-amber-50 text-amber-700 border-amber-200/50',
     colorCode: 'rgba(245,158,11,0.03)'
   },
-  azzouz: {
-    glow: 'group-hover:shadow-[0_0_25px_rgba(239,68,68,0.15)] group-hover:border-red-400/50',
-    badge: 'bg-red-50 text-red-700 border-red-200/50',
-    colorCode: 'rgba(239,68,68,0.03)'
-  },
-  'sarl telwas': {
-    glow: 'group-hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] group-hover:border-emerald-400/50',
-    badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/50',
-    colorCode: 'rgba(16,185,129,0.03)'
-  },
   'hamoud boualem': {
     glow: 'group-hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] group-hover:border-emerald-400/50',
     badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/50',
@@ -84,7 +74,7 @@ function PartnerLogo({ name, className = '' }) {
   let padding = 'p-3'
 
   if (n.includes('amour')) {
-    src = '/logos/amor benamor.svg'
+    src = '/logos/amour.svg'
     padding = 'p-3.5'
   } else if (n.includes('safina')) {
     src = '/logos/safina.svg'
@@ -104,9 +94,6 @@ function PartnerLogo({ name, className = '' }) {
   } else if (n.includes('jumbo')) {
     src = '/logos/jumbo.svg'
     padding = 'p-3'
-  } else if (n.includes('azzouz')) {
-    src = '/logos/azzouz.svg'
-    padding = 'p-3'
   } else if (n.includes('famico')) {
     src = '/logos/famico.svg'
     padding = 'p-3'
@@ -116,9 +103,6 @@ function PartnerLogo({ name, className = '' }) {
   } else if (n.includes('sos')) {
     src = '/logos/sos.svg'
     padding = 'p-3.5'
-  } else if (n.includes('telwas')) {
-    src = '/logos/telwas.svg'
-    padding = 'p-3'
   } else if (n.includes('hamoud') || n.includes('boualem')) {
     src = '/logos/hamoud_boualem_spa_logo.svg'
     padding = 'p-3.5'

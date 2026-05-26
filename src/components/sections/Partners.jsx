@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ShieldCheck, Handshake, CheckCircle2, ChevronRight, Sparkles, Layers,
+  ArrowLeft, ArrowRight,
 } from 'lucide-react'
 import SectionHeader from '../ui/SectionHeader'
 import { useLanguage } from '../../context/LanguageContext'
@@ -92,8 +93,8 @@ function PartnerLogo({ name, className = '' }) {
     src = '/logos/henkel.svg'
     padding = 'p-4.5'
   } else if (n.includes('jumbo')) {
-    src = '/logos/jumbo.svg'
-    padding = 'p-3'
+    src = '/logos/jumbo.jpg'
+    padding = 'p-3 rounded-full'
   } else if (n.includes('famico')) {
     src = '/logos/famico.svg'
     padding = 'p-3'
@@ -131,6 +132,47 @@ export default function Partners() {
   const { PARTNERS, t, isRtl } = useLanguage()
   const [activeFilter, setActiveFilter] = useState('all')
 
+  const scrollRef = useRef(null)
+  const [isDragging, setIsDragging] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollLeft, setScrollLeft] = useState(0)
+
+  // Carousel click scroll handler
+  const scroll = (direction) => {
+    const container = scrollRef.current
+    if (container) {
+      const scrollAmount = 300
+      const targetScroll = container.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount)
+      container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  // Mouse drag-to-scroll handlers
+  const handleMouseDown = (e) => {
+    const container = scrollRef.current
+    if (!container) return
+    setIsDragging(true)
+    setStartX(e.pageX - container.offsetLeft)
+    setScrollLeft(container.scrollLeft)
+  }
+
+  const handleMouseLeaveOrUp = () => {
+    setIsDragging(false)
+  }
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return
+    e.preventDefault()
+    const container = scrollRef.current
+    if (!container) return
+    const x = e.pageX - container.offsetLeft
+    const walk = (x - startX) * 1.5
+    container.scrollLeft = scrollLeft - walk
+  }
+
   // Categories filter configuration
   const filters = [
     { id: 'all', label: t('partnersFilterAll') },
@@ -145,41 +187,9 @@ export default function Partners() {
     return partner.category === activeFilter
   })
 
-  // Group partners for the double scrolling rows
-  // Row 1 (scrolling left): First 7 partners
-  // Row 2 (scrolling right): Remaining 7 partners
-  const row1Partners = PARTNERS.slice(0, 7)
-  const row2Partners = PARTNERS.slice(7)
-
   return (
     <section id="partners" className="py-24 bg-gradient-to-b from-white via-[#faf9f6] to-white overflow-hidden relative">
       
-      {/* Self-contained CSS for high-performance GPU-accelerated twin endless scrolling */}
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes scroll-left {
-          0% { transform: translate3d(0, 0, 0); }
-          100% { transform: translate3d(-50%, 0, 0); }
-        }
-        @keyframes scroll-right {
-          0% { transform: translate3d(-50%, 0, 0); }
-          100% { transform: translate3d(0, 0, 0); }
-        }
-        .animate-scroll-left {
-          display: flex;
-          width: max-content;
-          animation: scroll-left 38s linear infinite;
-        }
-        .animate-scroll-right {
-          display: flex;
-          width: max-content;
-          animation: scroll-right 38s linear infinite;
-        }
-        .animate-scroll-left:hover,
-        .animate-scroll-right:hover {
-          animation-play-state: paused;
-        }
-      `}} />
-
       {/* Aesthetic glowing background shapes */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-green-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -195,38 +205,49 @@ export default function Partners() {
           />
         </motion.div>
 
-        {/* 1. Twin Scrolling Endless Carousels (Stunning Visual Showcase) */}
-        <div className="space-y-6 my-16 relative">
-          {/* Soft blur side gradient masks to seamlessly blend the scrolling content */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
-
-          {/* Row 1: Leftward Scrolling Carousel */}
-          <div className="overflow-hidden py-2 select-none">
-            <div className="animate-scroll-left gap-6">
-              {[...row1Partners, ...row1Partners, ...row1Partners].map((partner, idx) => (
-                <div
-                  key={`r1-${idx}`}
-                  className="w-44 h-24 bg-white border border-gray-100 hover:border-green-600/30 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_-6px_rgba(20,83,45,0.08)] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                >
-                  <PartnerLogo name={partner.name} />
-                </div>
-              ))}
-            </div>
+        {/* 1. Draggable/Scrollable Manual Carousel (Highly Performant) */}
+        <div className="my-16 relative group/carousel">
+          
+          {/* Navigation Controls */}
+          <div className="flex justify-end gap-3 mb-6 select-none">
+            <button
+              onClick={() => scroll('left')}
+              className="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-green-900 hover:border-green-900 text-gray-600 hover:text-amber-400 flex items-center justify-center transition-all duration-300 shadow-sm cursor-pointer hover:scale-105 active:scale-95"
+              aria-label="Previous partners"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              className="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-green-900 hover:border-green-900 text-gray-600 hover:text-amber-400 flex items-center justify-center transition-all duration-300 shadow-sm cursor-pointer hover:scale-105 active:scale-95"
+              aria-label="Next partners"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
           </div>
 
-          {/* Row 2: Rightward Scrolling Carousel */}
-          <div className="overflow-hidden py-2 select-none">
-            <div className="animate-scroll-right gap-6">
-              {[...row2Partners, ...row2Partners, ...row2Partners].map((partner, idx) => (
-                <div
-                  key={`r2-${idx}`}
-                  className="w-44 h-24 bg-white border border-gray-100 hover:border-amber-600/30 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_-6px_rgba(180,83,9,0.08)] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                >
-                  <PartnerLogo name={partner.name} />
-                </div>
-              ))}
-            </div>
+          {/* Fade overlays on sides */}
+          <div className="absolute left-0 top-16 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-16 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+
+          {/* Scroll Track Container */}
+          <div
+            ref={scrollRef}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeaveOrUp}
+            onMouseUp={handleMouseLeaveOrUp}
+            onMouseMove={handleMouseMove}
+            className="overflow-x-auto scrollbar-none snap-x snap-mandatory flex gap-6 py-4 px-4 select-none cursor-grab active:cursor-grabbing"
+            style={{ scrollBehavior: 'smooth' }}
+          >
+            {PARTNERS.map((partner, idx) => (
+              <div
+                key={`p-${idx}`}
+                className="snap-start flex-shrink-0 w-48 h-28 bg-white border border-gray-100 hover:border-green-600/30 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_-6px_rgba(20,83,45,0.08)] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
+              >
+                <PartnerLogo name={partner.name} />
+              </div>
+            ))}
           </div>
         </div>
 
